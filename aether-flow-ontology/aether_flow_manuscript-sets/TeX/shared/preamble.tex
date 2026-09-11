@@ -1,0 +1,71 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{newtxtext}
+\usepackage{amsmath,amsthm,mathtools}
+\usepackage{newtxmath}
+\usepackage[letterpaper,margin=1in,headheight=15pt]{geometry}
+\usepackage{microtype,setspace,booktabs,tabularx,longtable,array,enumitem,titlesec,fancyhdr}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{193244}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,natbib=true,doi=true,url=true,eprint=false]{biblatex}
+\addbibresource{shared/references.bib}
+\usepackage[unicode,hidelinks,bookmarksnumbered=true]{hyperref}
+\usepackage{bookmark,xurl}
+\setstretch{1.07}
+\setlength{\parindent}{1.3em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{2em}
+\setlength{\bibitemsep}{0.45\baselineskip}
+\setlength{\bibhang}{1.5em}
+\renewcommand*{\bibfont}{\small}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+\setcounter{biburlnumpenalty}{7000}
+\setlist{topsep=0.4em,itemsep=0.25em,parsep=0pt}
+\titleformat{\section}{\large\bfseries\color{ink}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.65em}{}
+\titlespacing*{\section}{0pt}{1.2\baselineskip}{0.45\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.8\baselineskip}{0.3\baselineskip}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape \AE{}ther-flow and General Relativity}
+\fancyhead[R]{\small\ArticleShort}
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\Aether}{\AE{}ther}
+\newcommand{\Aflow}{\AE{}ther-flow}
+\newcommand{\TheoryName}{\Aflow{} Interpretation of Relativity}
+\newcommand{\TheoryProgram}{\Aether{} / \Aflow{} framework}
+\newcommand{\Sub}{\mathcal A}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newcommand{\Order}{\mathcal S}
+\newcommand{\Ph}{\Phi}
+\newcommand{\Proj}{D}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\R}{\mathbb R}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newcommand{\PaperTitle}[3]{%
+  \hypersetup{pdftitle={#1},pdfsubject={#2},pdfauthor={}}%
+  \thispagestyle{plain}%
+  \begin{center}
+  {\small\scshape \AE{}ther-flow and General Relativity\par}
+  \vspace{0.7em}
+  {\LARGE\bfseries\color{ink}#1\par}
+  \vspace{0.5em}
+  \if\relax\detokenize{#2}\relax\else
+  {\normalsize #2\par}
+  \vspace{0.35em}
+  \fi
+  \end{center}
+  \begin{abstract}\noindent #3\end{abstract}
+  \vspace{0.35em}
+}
+\newcommand{\References}{\printbibliography[heading=bibintoc,title={References}]}

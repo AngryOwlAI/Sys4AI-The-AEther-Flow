@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\newcommand{\ArticleShort}{Sequence overview}
+\input{shared/preamble.tex}
+% Copyright footer added 10 September 2026.
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
+\fancyfoot[R]{\small\thepage}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
+  \fancyfoot[R]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\begin{document}
+\PaperTitle{Overview of the \Aflow{} Framework}{Exact-GR benchmark and source proposal}{This overview states the main claims and dependencies of the \Aflow{} framework. Its effective gravitational model is general relativity with specified ordinary matter and an optional cosmological constant. Its source proposal is more limited: a smooth four-dimensional arena is assumed, while the mathematical type of \Aflow{} and the reconstruction of spacetime remain open. The framework therefore provides a defined comparison model and a source-level research program, not a demonstrated derivation of general relativity or a new set of gravitational predictions.}
+
+\section{Two questions, two levels of description}
+The \TheoryProgram{} asks whether observed spatial and temporal organization can be understood through a source structure not identified in advance with physical spacetime. The framework also makes a separate effective choice: use general relativity (GR) for the quantitative gravitational description. Keeping these two statements distinct is the organizing principle of the presentation.
+
+At source level, $\Sub$ denotes a smooth four-dimensional manifold and $\PhiSrc$ is an untyped placeholder for a possible order or evolution structure. These objects do not yet supply a source metric, causal order, clock, matter model, or reconstruction map. At effective level, $(M,g)$ is a Lorentzian spacetime with ordinary matter laws and operational definitions of measured quantities. There is no identification $\Sub=M$ or $\PhiSrc=u$ between the source placeholder and an observer four-velocity.
+
+The term \emph{exact closure} means that the effective gravitational law is fixed to the corresponding GR law, rather than approximately matched in one limit. It does not mean that the source ontology is complete, that all matter has been specified, or that the physical origin of the Einstein equation has been explained.
+
+\section{Common effective statement}
+We use signature $(-+++)$, $x^0=ct$ in length-valued covariant coordinates, a physical matter action $S_m$, and a constant $\Lambda$. The benchmark action is
+\begin{equation}
+S_{\rm eff}[g,\psi]=\frac{c^3}{16\pi G}
+\int_M\dd^4x\sqrt{-g}(R-2\Lambda)+S_m[g,\psi],
+\label{eq:SA}
+\end{equation}
+with $G>0$ and specified ordinary matter fields $\psi$. It yields
+\begin{equation}
+G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu},
+\qquad T_{\mu\nu}=-\frac{2c}{\sqrt{-g}}\frac{\delta S_m}{\delta g^{\mu\nu}}.
+\label{eq:einstein}
+\end{equation}
+The $\Lambda=0$ specialization is used for isolated flat-background calculations. No independent source-flow field is varied in \eqref{eq:SA}.
+
+Standard vacuum light in geometric optics and ideal timelike clocks obey
+\begin{equation}
+g_{\mu\nu}k^\mu k^\nu=0,
+\label{eq:null}
+\end{equation}
+\begin{equation}
+\dd\tau^2=-\frac{1}{c^2}g_{\mu\nu}\dd x^\mu\dd x^\nu.
+\label{eq:propertime}
+\end{equation}
+These are ordinary GR relations \parencite{Carroll1997}. Observational identity further requires matching matter, constants, admissible solutions, initial and boundary data, and measurement procedures. An added source restriction on solutions would have to be included in the comparison; it cannot be hidden behind equality of the displayed field equations.
+
+A constant $\Lambda$ is equivalent to the specific vacuum tensor
+$T^{(\Lambda)}_{\mu\nu}=-\Lambda c^4g_{\mu\nu}/(8\pi G)$, counted on one side of the equation only. A general conserved dark-energy component is a different matter model and needs its own specification. Cosmological acceleration is an allowed consequence of suitable GR models, not a source-to-GR derivation.
+
+\section{What each article contributes}
+The framework is developed across related expositions of one proposal. Their reading order is as follows.
+
+\paragraph{Exact-Closure Note.} The compact statement of the effective model and its conditional relationship to GR. It is the shortest route to the central distinction between adopted dynamics and a proposed source explanation.
+
+\paragraph{Foundations.} The first technical paper defines the narrow source assumptions. It separates the smooth source arena from spacetime and treats experienced spatial slices and S-time as reconstruction aims rather than derived structures.
+
+\paragraph{Dynamics.} The second technical paper fixes the action and stress--energy units, derives the effective equation, and specifies matter coupling, conservation, trajectories, and the weak-field limit. It distinguishes an arbitrary matter template from a fully specified physical model.
+
+\paragraph{Consistency.} The third technical paper gives the standard gauge and constraint analysis of the adopted gravitational sector. Its explicit stability calculation concerns weak radiative perturbations about Minkowski vacuum, not every GR background or a source theory that has not yet been defined.
+
+\paragraph{Relativistic Recovery.} The fourth technical paper derives representative observable relations: Newtonian acceleration, null propagation, static redshift, proper time, local special relativity, and homogeneous cosmology. Its results are inherited from the corresponding GR models under stated conditions.
+
+\paragraph{Geometry.} The fifth technical paper develops observer rest spaces and congruence kinematics. It derives Raychaudhuri evolution with consistent units, distinguishes static support from free fall, gives a zero-vorticity frame-dragging example, and separates shear, curvature, and wave strain.
+
+\paragraph{Synthesis article.} The synthesis article gives a self-contained conceptual account of the source proposal and the effective interpretation. It explains the explanatory gap and relates the approach to other gravitational research without claiming a new low-energy field law.
+
+A reader seeking the main conceptual argument can begin with the synthesis and use the technical papers for the corresponding calculations.
+
+\section{Results and shared limits}
+The effective action has the usual local GR gravitational degrees of freedom. The Arnowitt--Deser--Misner (ADM) count and the Minkowski transverse-traceless analysis yield two radiative gravitational polarizations \parencite{ADM1962}. No additional \Aflow{} vector or scalar gravitational mode has been introduced. This does not count matter modes or prove stability on arbitrary backgrounds.
+
+The geometry paper uses standard observer kinematics: expansion, shear, vorticity, and acceleration \parencite{EllisVanElst1999}. These are properties of a metric and chosen observer family. They neither define a source flow nor provide a unique taxonomy of gravity. In particular, congruence vorticity is not synonymous with frame dragging, and zero shear does not imply absence of tidal curvature.
+
+The shared source limit is equally precise. The papers do not derive Lorentzian signature, metric dynamics, ordinary matter, operational clocks, or measured constants from $\Sub$ and $\PhiSrc$. They also do not establish that a literal substrate exists. The absence of such results is not a proof that all possible source completions fail; it identifies which argument is still required.
+
+\section{Relation to other approaches}
+The effective benchmark belongs to standard GR, not to a preferred-structure modification. Einstein-aether theory adds a dynamical timelike vector, whereas Ho\v{r}ava's proposal changes the short-distance spacetime scaling structure \parencite{JacobsonMattingly2001,Horava2009}. Sharing words such as aether or flow does not make these actions equivalent to \eqref{eq:SA}.
+
+The source ambition is closer in subject to approaches that seek an explanation for relativistic dynamics from other assumptions. Examples include thermodynamic reasoning, induced gravity, and consistency-based self-coupling \parencite{Jacobson1995,Visser2002,Deser2004}. Each has its own premises. Their existence does not supply the missing premises of this ontology, and a successful result in one approach cannot be transferred here by analogy. The detailed comparison is reserved for the synthesis rather than repeated as a large citation cluster in every article.
+
+\section{Use of the benchmark}
+The effective GR model can remain a comparison target while source work proceeds. If a proposed extension fails, one may set that extension aside and retain the independent benchmark. This is a research decision, not a proof that source assumptions are immune to failure. Any assumption implicated by a failed calculation must be reconsidered on its own merits.
+
+\section{Conclusion}
+The framework presents a definite effective gravitational model and a deliberately limited source proposal. Its technical value lies in explicit conventions, calculations, observer choices, and limits. Its open question is whether a specified source theory can reproduce those structures without assuming them in disguised form.
+\References
+\end{document}

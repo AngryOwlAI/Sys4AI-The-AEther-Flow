@@ -1,0 +1,379 @@
+\documentclass[11pt]{article}
+\newcommand{\ArticleShort}{Geometry}
+\input{shared/preamble.tex}
+% Copyright footer added 10 September 2026.
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
+\fancyfoot[R]{\small\thepage}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
+  \fancyfoot[R]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\begin{document}
+\PaperTitle{Observer Congruences and the Geometry of Flow}{}{A timelike observer congruence provides a precise geometric meaning for flow language within general relativity. Its expansion, shear, vorticity, and acceleration describe different aspects of neighboring observer motion; none alone is equivalent to gravity or identifies an underlying substance. We develop the local rest-space decomposition, derive the correctly normalized Raychaudhuri equation, and apply it to homogeneous expansion and static support. A zero-angular-momentum observer construction shows why frame dragging need not coincide with congruence vorticity. The electric Weyl tensor and geodesic deviation distinguish curvature from deformation rate and wave strain. These results form an effective observer-based description. They do not identify the congruence with the unresolved source variable $\PhiSrc$ or derive the spacetime metric from the proposed ontology.}
+
+\section{Why a congruence is useful}
+Flow language can express several different physical ideas. A fluid can expand, a family of supported observers can accelerate, neighboring freely falling bodies can acquire relative motion, and a rotating family can fail to define orthogonal spatial hypersurfaces. General relativity (GR) distinguishes these situations mathematically. Treating all of them as a literal swirl would obscure those distinctions.
+
+A \emph{congruence} is a smooth family of nonintersecting worldlines on a region of spacetime. A timelike congruence describes a family of observers, or the motion of a suitable continuous matter model. Its geometric quantities give a disciplined effective meaning to the word flow. This is standard relativistic kinematics \parencite{Raychaudhuri1955,EllisVanElst1999}; the present use does not introduce an additional gravitational field.
+
+The source terminology must remain separate. Foundations assumes a smooth source manifold $\Sub$ and leaves the meaning of $\PhiSrc$ unspecified. No map from $\PhiSrc$ to the congruence is given. The calculations below start with a Lorentzian spacetime and chosen observers, so they cannot be counted as a derivation of those structures from the source proposal.
+
+\section{Spacetime, normalization, and observer choice}
+Use signature $(-+++)$ and the Levi-Civita connection. Our curvature convention is
+\begin{equation}
+[\nabla_\mu,\nabla_\nu]V^\rho=R^\rho{}_{\sigma\mu\nu}V^\sigma,
+\qquad R_{\mu\nu}=R^\rho{}_{\mu\rho\nu}.
+\end{equation}
+The congruence is represented by a future-directed four-velocity
+\begin{equation}
+u^\mu=\frac{\dd x^\mu}{\dd\tau},\qquad g_{\mu\nu}u^\mu u^\nu=-c^2.
+\label{eq:unitnorm}
+\end{equation}
+In length-valued coordinates, $u$ has velocity dimensions. When an example uses $t$ in seconds, its time component is correspondingly $u^t=\dd t/\dd\tau$; this does not change the normalization.
+
+The effective field equation is
+\begin{equation}
+G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}.
+\label{eq:einstein}
+\end{equation}
+The kinematic identities developed first do not require \eqref{eq:einstein}. That equation enters when curvature is related to matter or a particular gravitational solution is chosen.
+
+There is no unique congruence assigned to every metric. Comoving cosmological observers, static supported observers, and freely falling detectors are different choices made for different questions. If a matter model supplies a velocity, that velocity has a physical interpretation within the model; it is not automatically a universally preferred frame for all laws. Kinematic scalars are coordinate-invariant once $u$ is fixed, but generally change when the observer family changes.
+
+\section{Local rest space and relative velocity}
+The rest-space metric and projector are
+\begin{equation}
+h_{\mu\nu}=g_{\mu\nu}+\frac{u_\mu u_\nu}{c^2},\qquad
+h^\mu{}_{\nu}=\delta^\mu{}_{\nu}+\frac{u^\mu u_\nu}{c^2}.
+\label{eq:projector}
+\end{equation}
+Normalization gives
+\begin{equation}
+h_{\mu\nu}u^\nu=0,\qquad
+h^\mu{}_{\alpha}h^\alpha{}_{\nu}=h^\mu{}_{\nu},\qquad
+h^\mu{}_{\mu}=3.
+\label{eq:projectorprops}
+\end{equation}
+Thus $h$ selects the three-dimensional positive-definite subspace orthogonal to $u$ at each event. It is not, without further conditions, the metric of a global family of spatial slices.
+
+Every tangent vector decomposes as
+\begin{equation}
+X^\mu=-\frac{u_\nu X^\nu}{c^2}u^\mu+h^\mu{}_{\nu}X^\nu.
+\label{eq:vectordecomp}
+\end{equation}
+The first term is its temporal component relative to the observer; the second is spatial. For another \emph{normalized future-directed four-velocity} $w$, this can be written
+\begin{equation}
+w^\mu=\Gamma(u^\mu+v^\mu),\qquad u_\mu v^\mu=0.
+\label{eq:reldecomp}
+\end{equation}
+Using $w^2=-c^2$ gives
+\begin{equation}
+\Gamma=-\frac{u_\mu w^\mu}{c^2}
+=\frac{1}{\sqrt{1-v^2/c^2}},\qquad
+v^2=h_{\mu\nu}v^\mu v^\nu.
+\label{eq:gammafactor}
+\end{equation}
+The normalization of $w$ is necessary; an arbitrary rescaled timelike tangent does not give the same Lorentz factor. Equations \eqref{eq:reldecomp}--\eqref{eq:gammafactor} are the usual local special-relativistic relative-velocity relations, expressed covariantly.
+
+\section{Expansion, shear, vorticity, and acceleration}
+For a scalar $f$, spatial differentiation is
+\begin{equation}
+D_\mu f=h_\mu{}^\alpha\nabla_\alpha f.
+\label{eq:projectedderivative}
+\end{equation}
+For a spatial covector $X_\nu$, every free index must be projected:
+\begin{equation}
+D_\mu X_\nu=h_\mu{}^\alpha h_\nu{}^\beta\nabla_\alpha X_\beta.
+\end{equation}
+The same rule applies to higher-rank tensors. Projecting only the derivative index need not leave the other indices spatial.
+
+The observer acceleration and expansion scalar are
+\begin{align}
+a_\mu&=u^\nu\nabla_\nu u_\mu,\label{eq:acceleration}\\
+\theta&=\nabla_\mu u^\mu.\label{eq:expansion}
+\end{align}
+The projected derivative $B_{\mu\nu}=h_\mu{}^\alpha h_\nu{}^\beta\nabla_\alpha u_\beta$ splits into its trace, symmetric trace-free part, and antisymmetric part:
+\begin{align}
+\sigma_{\mu\nu}&=B_{(\mu\nu)}-\frac13\theta h_{\mu\nu},
+\label{eq:shear}\\
+\omega_{\mu\nu}&=B_{[\mu\nu]}.
+\label{eq:vorticity}
+\end{align}
+Symmetrization and antisymmetrization each include the factor $1/2$. These definitions imply
+\begin{equation}
+a_\mu u^\mu=0,\quad \sigma_{\mu\nu}u^\nu=\omega_{\mu\nu}u^\nu=0,
+\quad \sigma^\mu{}_{\mu}=0.
+\label{eq:kinematicprops}
+\end{equation}
+The full derivative is therefore
+\begin{equation}
+\boxed{\nabla_\mu u_\nu=\frac13\theta h_{\mu\nu}
++\sigma_{\mu\nu}+\omega_{\mu\nu}-\frac{u_\mu a_\nu}{c^2}.}
+\label{eq:flowdecomp}
+\end{equation}
+The acceleration term accounts for the part not contained in the spatial derivative. Contracting the first index with $u^\mu$ recovers $a_\nu$, which checks its sign and normalization.
+
+Expansion describes fractional local volume change; shear describes anisotropic deformation rate; vorticity describes local twisting of the observer directions; acceleration measures departure from geodesic motion. In a length-valued orthonormal frame, $\theta$, $\sigma$, and $\omega$ have dimensions $T^{-1}$, while $a$ has dimensions $L/T^2$. These quantities describe $(g,u)$ together. They are not four independent gravitational substances, nor an invariant partition of all gravitational phenomena.
+
+\section{Raychaudhuri evolution}
+\subsection{Derivation with the stated normalization}
+The evolution of $\theta$ follows from differentiating the acceleration and using the Ricci identity:
+\begin{align}
+\nabla_\mu a^\mu
+&=(\nabla_\mu u^\nu)(\nabla_\nu u^\mu)
++u^\nu\nabla_\mu\nabla_\nu u^\mu\\
+&=(\nabla_\mu u^\nu)(\nabla_\nu u^\mu)
++u^\nu\nabla_\nu\theta+R_{\mu\nu}u^\mu u^\nu.
+\end{align}
+The contraction of \eqref{eq:flowdecomp} gives
+\begin{equation}
+(\nabla_\mu u^\nu)(\nabla_\nu u^\mu)
+=\frac13\theta^2+\sigma_{\mu\nu}\sigma^{\mu\nu}
+-\omega_{\mu\nu}\omega^{\mu\nu}.
+\end{equation}
+The acceleration cross terms vanish by orthogonality. Solving for the derivative of $\theta$ yields
+\begin{equation}
+\boxed{u^\mu\nabla_\mu\theta=-\frac13\theta^2
+-\sigma_{\mu\nu}\sigma^{\mu\nu}+\omega_{\mu\nu}\omega^{\mu\nu}
++\nabla_\mu a^\mu-R_{\mu\nu}u^\mu u^\nu.}
+\label{eq:raychaudhuri}
+\end{equation}
+This is the Raychaudhuri identity for the definitions used here \parencite{Raychaudhuri1955,EllisVanElst1999}. Every term has dimensions $T^{-2}$. There is no additional factor $c^{-2}$ on the Ricci contraction because the four-velocity already has norm $-c^2$.
+
+The acceleration term is a \emph{full spacetime divergence}. An alternative form uses
+\begin{equation}
+\nabla_\mu a^\mu=D_\mu a^\mu+\frac{a_\mu a^\mu}{c^2}.
+\end{equation}
+Using this projected divergence introduces the positive acceleration-square term. Adding it while retaining the full divergence would double count the contribution.
+
+\subsection{Focusing and the meaning of rotation}
+For geodesic observers $a=0$. For an irrotational geodesic congruence, the vorticity term also vanishes. If $R_{\mu\nu}u^\mu u^\nu\geq0$, \eqref{eq:raychaudhuri} gives $\dot\theta\leq-\theta^2/3$. This is a conditional focusing statement, not a universal claim that every observer congruence must contract.
+
+Frobenius provides the local integrability criterion
+\begin{equation}
+\omega_{\mu\nu}=0
+\quad\Longleftrightarrow\quad
+u_{[\mu}\nabla_\nu u_{\rho]}=0
+\quad\Longleftrightarrow\quad
+\hbox{local hypersurface orthogonality}.
+\label{eq:frobenius}
+\end{equation}
+The result assumes a smooth nonvanishing timelike field. It does not, by itself, supply a global foliation. Nonzero vorticity obstructs orthogonal local slices for that observer family, not the existence of all possible spatial slicings of the spacetime.
+
+\section{Cosmological expansion and defocusing}
+For a small bundle of neighboring worldlines, let $V$ denote the infinitesimal volume measured in the local rest space. Its fractional evolution is
+\begin{equation}
+\frac{1}{V}\frac{\dd V}{\dd\tau}=\theta.
+\label{eq:volumeexpansion}
+\end{equation}
+The statement concerns local measured volume and requires no embedding in a larger container.
+
+For comoving observers in a Friedmann--Lema\^itre--Robertson--Walker (FLRW) spacetime,
+\begin{equation}
+\dd s^2=-c^2\dd t^2+a(t)^2\dd\Sigma_k^2,\qquad u=\partial_t,
+\end{equation}
+where $a$ is a length and $\dd\Sigma_k^2$ is a dimensionless constant-curvature spatial metric. The determinant gives
+\begin{equation}
+\theta=\frac{1}{\sqrt{-g}}\partial_t\sqrt{-g}
+=3\frac{\dot a}{a}=3H,
+\qquad a_\mu=\sigma_{\mu\nu}=\omega_{\mu\nu}=0.
+\label{eq:flrwtheta}
+\end{equation}
+Thus an expanding cosmology need not involve vorticity. It is the volume-changing part of this particular congruence's motion.
+
+For a comoving perfect fluid with non-$\Lambda$ mass-equivalent density $\rho$ and pressure $p$, Einstein's equation implies
+\begin{equation}
+R_{\mu\nu}u^\mu u^\nu
+=4\pi G\left(\rho+\frac{3p}{c^2}\right)-\Lambda c^2.
+\end{equation}
+Substituting into \eqref{eq:raychaudhuri} gives
+\begin{equation}
+\dot\theta=-\frac13\theta^2
+-4\pi G\left(\rho+\frac{3p}{c^2}\right)+\Lambda c^2,
+\label{eq:raychaudhuri_flrw_lambda}
+\end{equation}
+and therefore
+\begin{equation}
+\frac{\ddot a}{a}=-\frac{4\pi G}{3}
+\left(\rho+\frac{3p}{c^2}\right)+\frac{\Lambda c^2}{3}.
+\label{eq:flrw_accel_lambda}
+\end{equation}
+The same result is obtained from the Friedmann equations in Relativistic Recovery. Positive $\Lambda$ opposes focusing, but produces net acceleration only when the total right-hand side is positive. A negative-pressure component contributes similarly only according to its actual stress tensor and matter dynamics.
+
+A constant $\Lambda$ can be represented by $T^{(\Lambda)}_{\mu\nu}=-\Lambda c^4g_{\mu\nu}/(8\pi G)$. A general dark-energy fluid is not interchangeable with this tensor. The geometric calculation here does not identify either component with $\PhiSrc$ or derive its magnitude.
+
+\section{Static support and gravitational redshift}
+\subsection{The lapse gradient is a proper acceleration}
+For a static region with $N>0$,
+\begin{equation}
+\dd s^2=-N(\mathbf x)^2c^2\dd t^2+\gamma_{ij}(\mathbf x)\dd x^i\dd x^j,
+\label{eq:staticmetric}
+\end{equation}
+the fixed-position observers have
+\begin{equation}
+u=N^{-1}\partial_t.
+\label{eq:staticu}
+\end{equation}
+Their spatial metric is time-independent and they are hypersurface normal, so
+\begin{equation}
+\theta=0,\qquad \sigma_{\mu\nu}=0,\qquad \omega_{\mu\nu}=0.
+\label{eq:statickinematics}
+\end{equation}
+Nevertheless, direct evaluation of $u^\nu\nabla_\nu u_\mu$ gives
+\begin{equation}
+\boxed{a_\mu=c^2D_\mu\ln N.}
+\label{eq:staticacceleration}
+\end{equation}
+This is already the observer's physical four-acceleration; it must not be multiplied by another $c^2$. The $c=1$ lapse relation is common in the $3+1$ literature \parencite{Gourgoulhon2010}.
+
+In a weak field with $\epsilon=\sup|\Ph|/c^2\ll1$ and variation scale $L$,
+\begin{equation}
+N=1+\frac{\Ph}{c^2}+O(\epsilon^2),
+\label{eq:lapseweakfield}
+\end{equation}
+so
+\begin{equation}
+a_i=\partial_i\Ph+O(c^2\epsilon^2/L).
+\label{eq:weakfieldacceleration}
+\end{equation}
+For the isolated Newtonian potential $\Ph=-GM/r$, this is outward support, while the leading free-fall acceleration is inward. The locally measured magnitude is
+\begin{equation}
+a_{\rm proper}=\sqrt{\gamma^{ij}a_i a_j}.
+\label{eq:physicalacceleration}
+\end{equation}
+Static observers therefore illustrate why gravity cannot be identified with vorticity or expansion. They can have neither while living in curved spacetime.
+
+\subsection{An explicit check of Raychaudhuri}
+Take the diagnostic metric
+\begin{equation}
+\dd s^2=-c^2N(x)^2\dd t^2+\dd x^2+\dd y^2+\dd z^2.
+\end{equation}
+Its static congruence has
+\begin{equation}
+a^x=c^2\frac{N'}{N},\qquad
+\nabla_\mu a^\mu=c^2\frac{N''}{N},\qquad
+R_{\mu\nu}u^\mu u^\nu=c^2\frac{N''}{N}.
+\end{equation}
+The two terms cancel in \eqref{eq:raychaudhuri}, as required by $\theta=\sigma=\omega=0$. For a lapse linear in $x$, the curvature vanishes but the static observers can still accelerate; for a nonlinear lapse, the divergence and curvature terms need not vanish separately. This separates observer acceleration from spacetime curvature and checks the normalization without appealing to a source model.
+
+\subsection{Clock comparison}
+Static proper time satisfies
+\begin{equation}
+\dd\tau=N\dd t.
+\label{eq:stationarytime}
+\end{equation}
+For a freely propagating null signal, the Killing energy associated with $\partial_t$ is constant. Its locally measured frequency is proportional to $1/N$, so
+\begin{equation}
+\frac{\nu_R}{\nu_E}=\frac{N_E}{N_R},
+\label{eq:redshift}
+\end{equation}
+for static emitter $E$ and receiver $R$. In the weak field,
+\begin{equation}
+\frac{\nu_R-\nu_E}{\nu_E}=\frac{\Ph_E-\Ph_R}{c^2}+O(\epsilon^2).
+\label{eq:redshiftweakfield}
+\end{equation}
+The lapse therefore enters both support acceleration and static clock comparison. That common geometric role is a valid interpretive connection. It does not show that a source flow has produced either effect.
+
+\section{Vorticity and frame dragging are distinct}
+The terms rotation, twist, and frame dragging should not be used as synonyms. Vorticity is a property of a chosen congruence. Frame-dragging measurements concern relations between specified observers, gyroscopes, and the geometry of a rotating gravitating system. The choice of reference frame and, often, asymptotic conditions matter.
+
+A concrete example is a circular stationary-axisymmetric metric in a region where the following slicing is valid:
+\begin{equation}
+\dd s^2=-N^2c^2\dd t^2+
+\gamma_{\phi\phi}(\dd\phi-\Omega_Z\dd t)^2+
+\gamma_{AB}\dd x^A\dd x^B.
+\end{equation}
+Here $A,B$ label the two meridional coordinates, $N>0$, and all coefficients are independent of $t$ and $\phi$. Consider
+\begin{equation}
+u=N^{-1}(\partial_t+\Omega_Z\partial_\phi).
+\end{equation}
+The corresponding covector is
+\begin{equation}
+u_\flat=-Nc^2\dd t,
+\qquad u_\phi=0,
+\qquad \Omega_Z=-\frac{g_{t\phi}}{g_{\phi\phi}}.
+\end{equation}
+These are zero-angular-momentum observers (ZAMOs). Because
+$u_\flat\wedge\dd u_\flat=0$, their vorticity vanishes. They are the locally nonrotating, hypersurface-normal observers described in \textcite{Gourgoulhon2010}. Their coordinate angular velocity $\Omega_Z$ can nonetheless be nonzero in a rotating gravitational field relative to an appropriate asymptotic reference.
+
+Thus frame dragging cannot be universally identified with nonzero $\omega_{\mu\nu}$. An off-diagonal metric component alone is also insufficient: rotating coordinates in flat spacetime can create one. Conversely, a physically rotating family in Minkowski spacetime can have nonzero vorticity without any gravitational curvature. A proposed flow account must state which observers and which observable are involved rather than assigning all rotational phenomena to one tensor.
+
+\section{Curvature, tidal acceleration, and wave strain}
+\subsection{The electric Weyl tensor}
+Define the electric part of the Weyl tensor relative to $u$ by
+\begin{equation}
+E_{\mu\nu}=\frac{1}{c^2}C_{\mu\alpha\nu\beta}u^\alpha u^\beta.
+\label{eq:weylelectric}
+\end{equation}
+It is spatial, symmetric, and trace-free by the algebraic Weyl identities, whether or not matter is present. Its orthonormal components have dimensions $L^{-2}$. It describes the Weyl part of the tidal field seen by these observers, not every contribution to geodesic deviation.
+
+For neighboring freely falling worldlines with an infinitesimal connecting vector $\xi$ commuting with their common geodesic tangent, geodesic deviation is
+\begin{equation}
+\frac{D^2\xi^\mu}{D\tau^2}
+=-R^\mu{}_{\alpha\nu\beta}u^\alpha\xi^\nu u^\beta.
+\label{eq:geodesicdeviation}
+\end{equation}
+The sign follows the stated curvature convention and index ordering. In a Ricci-flat region, $R=C$, so for spatial $\xi$,
+\begin{equation}
+\boxed{\frac{D^2\xi^\mu}{D\tau^2}=-c^2E^\mu{}_{\nu}\xi^\nu.}
+\end{equation}
+The factor of $c^2$ converts curvature times separation into acceleration \parencite{Carroll1997}. In a weak static vacuum field, $E_{ij}\simeq\partial_i\partial_j\Ph/c^2$, which reproduces the Newtonian relative acceleration $-\partial_i\partial_j\Ph\,\xi^j$.
+
+Vacuum with $\Lambda\ne0$ is not Ricci-flat. For an Einstein space $R_{\mu\nu}=\Lambda g_{\mu\nu}$, the spatial tidal equation becomes
+\begin{equation}
+\frac{D^2\xi^\mu}{D\tau^2}
+=-c^2E^\mu{}_{\nu}\xi^\nu+\frac{\Lambda c^2}{3}\xi^\mu.
+\end{equation}
+De Sitter spacetime has zero Weyl tensor but nonzero isotropic relative acceleration. Matter supplies further Ricci contributions. These examples show why an expression involving only $E_{\mu\nu}$ needs a stated regime.
+
+\subsection{Shear, strain, and a weak gravitational wave}
+Shear is a rate of anisotropic deformation, not the curvature tensor itself. The distinction becomes explicit in a weak vacuum gravitational wave written in transverse--traceless (TT) coordinates:
+\begin{equation}
+\dd s^2=-c^2\dd t^2+
+[\delta_{ij}+h^{\TT}_{ij}(t,\mathbf x)]\dd x^i\dd x^j,
+\qquad \partial^i h^{\TT}_{ij}=0,\quad \delta^{ij}h^{\TT}_{ij}=0.
+\label{eq:ttmetric}
+\end{equation}
+Let $\varepsilon_h\ll1$ bound the dimensionless wave amplitude, let $T$ be its temporal variation scale, and assume the corresponding derivative bounds. The estimates below refer to that fixed scale, with $|\xi|$ the local spatial separation. To first order, the fixed-spatial-coordinate worldlines define a freely falling congruence $u=\partial_t$. Its projected velocity gradient is
+$B_{ij}=\tfrac12\partial_tg_{ij}$. Hence
+\begin{equation}
+\sigma_{ij}=\frac12\dot h^{\TT}_{ij}+O(\varepsilon_h^2/T),\qquad
+\theta=O(\varepsilon_h^2/T).
+\end{equation}
+The curvature calculation gives
+\begin{equation}
+E_{ij}=-\frac{1}{2c^2}\ddot h^{\TT}_{ij}+O(\varepsilon_h^2/(c^2T^2)),
+\end{equation}
+so a small spatial separation obeys
+\begin{equation}
+\frac{D^2\xi^i}{D\tau^2}
+=\frac12\ddot h^{\TT}_{ij}\xi^j+O(\varepsilon_h^2|\xi|/T^2),
+\end{equation}
+at leading order about the central observer. The dimensionless metric perturbation represents strain, its first time derivative gives shear in this congruence, and its second derivative gives tidal acceleration per separation.
+
+These relations explain the connection without identifying the quantities. Arbitrary shear need not indicate radiation, and static congruences can have zero shear despite nonzero tidal curvature. The weak-wave example assumes linear perturbations, the specified observer family, and separations small enough for the local geodesic-deviation description.
+
+\section{Local special relativity}
+At an event $p$, one can choose a local inertial frame with
+\begin{align}
+g_{ab}(p)&=\eta_{ab},\qquad \partial_cg_{ab}(p)=0,\label{eq:localinertial}\\
+u^a(p)&=(c,0,0,0).\label{eq:localobserver}
+\end{align}
+The local line element is consequently
+\begin{equation}
+\dd s^2=-c^2\dd t_{\rm loc}^2+\dd x_{\rm loc}^2+
+\dd y_{\rm loc}^2+\dd z_{\rm loc}^2
+\label{eq:localsr}
+\end{equation}
+at the tangent-space level. Relative velocities obey \eqref{eq:gammafactor}. Curvature produces finite-region corrections; it is not removed by choosing an observer. Nothing in this local construction selects a physical \Aether{} rest frame.
+
+\section{Interpretive scope and conclusion}
+The congruence description makes the flow vocabulary mathematically usable: expansion measures volume change, acceleration distinguishes support from free fall, vorticity tests hypersurface orthogonality, and shear measures anisotropic deformation rate. Curvature controls tidal relations and enters the evolution of these quantities. Their roles overlap in particular situations but are not interchangeable.
+
+This is an account of observers and geometry within the adopted GR model. It adds no independent gravitational degree of freedom and no empirical prediction beyond the corresponding effective model. It also supplies no source-to-congruence map, source clock, or proof that physical spacetime is a slice of $\Sub$. Those claims require source structure not given here. The geometric results remain useful precisely because their observer choice, normalization, and domain are explicit.
+\References
+\end{document}

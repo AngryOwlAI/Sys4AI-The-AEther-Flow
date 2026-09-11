@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+\newcommand{\ArticleShort}{Synthesis}
+\input{shared/preamble.tex}
+% Copyright footer added 10 September 2026.
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
+\fancyfoot[R]{\small\thepage}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
+  \fancyfoot[R]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\begin{document}
+\PaperTitle{\Aflow{} as an Interpretation of General Relativity}{Source assumptions, observer geometry, and the explanatory gap}{The \Aether{} / \Aflow{} proposal seeks an account of spatial and temporal organization in terms of an underlying source structure. Its quantitative effective model is deliberately more conservative: it adopts general relativity with specified ordinary matter and introduces no additional gravitational field. This article presents that distinction as a single argument. A smooth four-dimensional source arena and an unresolved flow placeholder do not yet define source dynamics or establish the physical existence of a substrate. Observer congruences nevertheless provide a precise effective description of expansion, static support, rotation, and deformation within GR, provided these quantities are not confused with one another or with curvature itself. Exact agreement with a corresponding GR model is therefore conditional model identity, not evidence of a completed derivation. The proposal's remaining explanatory task is to construct a source-to-observable connection without importing its intended target as a premise.}
+
+\section{The proposal and its central distinction}
+General relativity (GR) gives a quantitative account of spacetime geometry and its relation to matter. The \TheoryProgram{} asks a different, additional question: could the spatial and temporal relations used in that account arise from a source organization not identified at the outset with physical spacetime? The language of \Aether{} and \Aflow{} is intended to express this source-level possibility.
+
+A possibility is not yet a model. To explain spacetime from another structure, one must define the source objects, state their laws or constraints, and demonstrate how the operational content of relativity follows. The present source specification has not completed these steps. Its effective model instead takes GR as an explicit starting assumption.
+
+The distinction prevents two opposite mistakes. The first would be to announce that the ontology has derived Einsteinian gravity because its effective equations have been chosen to be Einstein's equations. The second would be to conclude that the source proposal must be false simply because a derivation has not been supplied. Neither conclusion follows from the stated assumptions. The framework provides an adopted comparison model and an unfinished explanatory proposal.
+
+This article brings those parts together. The technical companion papers give the action variation, perturbative mode count, operational limits, and congruence calculations. Their standard GR content should be read as inherited physics, not as a claim that the proposal has independently discovered those results.
+
+\section{What is assumed about the source}
+The source arena is denoted by $\Sub$ and assumed to be a smooth four-dimensional manifold. It is not identified with the effective spacetime manifold $M$. Its dimension and smooth structure are primitive assumptions, not products of a source derivation. No particular metric, physical causal order, clock, or matter content is supplied on $\Sub$.
+
+The symbol $\PhiSrc$ is a placeholder for a possible source-order or evolution structure. Its mathematical type remains unresolved. It has not been specified as a one-parameter flow, a vector field, a stochastic process, or a generator. The usual properties of a mathematical flow therefore cannot be inferred from its name. In particular, no parameter has been identified as physical time.
+
+The older language of intrinsic ordered motion is retained as motivation rather than a completed definition. Likewise, the suggestion that experienced space is a local slice and that S-time describes experienced order identifies possible reconstruction aims. The present assumptions do not define an embedding of that slice in $\Sub$, a monotone clock functional, or an explanation of subjective experience.
+
+This restraint does not remove the original source question. It makes the proposed explanation evaluable in principle. A future source model must say what carries the order, what counts as a state or process, which transformations are allowed, and how a physical observer can obtain measurements from it. Until those relations exist, referring to $\Sub$ as underlying reality is a hypothesis about physical interpretation, not an experimentally established fact.
+
+\section{A definite effective gravitational model}
+\subsection{Fields and equations}
+The effective arena is a time-oriented four-dimensional Lorentzian spacetime $(M,g)$ with signature $(-+++)$ and Levi-Civita connection. In length-valued covariant coordinates, $x^0=ct$. With a physical matter action $S_m$, the adopted model is
+\begin{equation}
+S_{\rm eff}[g,\psi]=\frac{c^3}{16\pi G}
+\int_M\dd^4x\sqrt{-g}(R-2\Lambda)+S_m[g,\psi],
+\label{eq:SeffLambda}
+\end{equation}
+where $G>0$, $\Lambda$ is constant, and $\psi$ denotes specified ordinary matter. The $\Lambda=0$ specialization is
+\begin{equation}
+S_{\rm eff}\big|_{\Lambda=0}=\frac{c^3}{16\pi G}
+\int_M\dd^4x\sqrt{-g}R+S_m[g,\psi].
+\label{eq:Seff}
+\end{equation}
+The stress tensor and bulk metric equation are
+\begin{equation}
+T_{\mu\nu}=-\frac{2c}{\sqrt{-g}}\frac{\delta S_m}{\delta g^{\mu\nu}},
+\qquad G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}.
+\label{eq:Einstein}
+\end{equation}
+These are the ordinary GR dynamics with the action units stated explicitly. Compactly supported variations suffice for the bulk equation; specific boundary problems need the corresponding boundary terms and data.
+
+No independent $\PhiSrc$ field appears in \eqref{eq:SeffLambda}. Thus there is no additional low-energy gravitational equation, coupling parameter, or source-flow mode to compare with the metric sector. The usual local gravitational degree-of-freedom count is retained \parencite{ADM1962}. That is a property of the chosen action, not evidence that an undefined microscopic theory has already reduced to two modes.
+
+\subsection{Operational meaning}
+For standard Maxwell light in vacuum geometric optics,
+\begin{equation}
+g_{\mu\nu}k^\mu k^\nu=0,
+\label{eq:null}
+\end{equation}
+with null geodesic propagation. For an ideal timelike clock,
+\begin{equation}
+\dd\tau^2=-\frac1{c^2}g_{\mu\nu}\dd x^\mu\dd x^\nu.
+\label{eq:tau}
+\end{equation}
+These formulas connect the metric to measurement \parencite{Carroll1997}. They require the ordinary matter laws used to model light and clocks; the phrase minimal coupling is not a proof that an arbitrary matter action has the same propagation properties.
+
+The benchmark agrees exactly with the corresponding GR model only when matter, constants, allowed solutions, initial and boundary data, and measurement procedures match. A hidden source constraint selecting different solutions would change that content. Here no such constraint is specified. The statement of agreement is consequently conditional model identity, not an additional empirical success attributable to the ontology.
+
+\subsection{Cosmology without a new source law}
+The cosmological constant in \eqref{eq:SeffLambda} may be moved to the matter side as
+\begin{equation}
+T^{(\Lambda)}_{\mu\nu}=-\frac{\Lambda c^4}{8\pi G}g_{\mu\nu}.
+\end{equation}
+That specific constant vacuum tensor is equivalent to $\Lambda$. A general dark-energy field or fluid is not; its dynamics and perturbations must be supplied separately. The same component must not be counted on both sides of the field equation.
+
+For a Friedmann--Lema\^itre--Robertson--Walker (FLRW) model with non-$\Lambda$ density $\rho$ and pressure $p$,
+\begin{equation}
+\frac{\ddot a}{a}=-\frac{4\pi G}{3}\left(\rho+\frac{3p}{c^2}\right)
++\frac{\Lambda c^2}{3}.
+\end{equation}
+Positive $\Lambda$ contributes toward acceleration but need not outweigh matter at every epoch. The supernova and Planck references provide motivation for studying accelerated cosmological benchmarks \parencite{Riess1998,Perlmutter1999,Planck2018Parameters}. They do not identify dark energy with $\PhiSrc$, derive the value of $\Lambda$, or establish a source origin of GR.
+
+\section{What an observer-based flow description can explain}
+Once a spacetime and a family of observers have been selected, the word flow has a precise mathematical use. A timelike congruence has four-velocity $u^\mu=\dd x^\mu/\dd\tau$, normalized by $u^\mu u_\mu=-c^2$. Its local rest-space projector is
+\begin{equation}
+h_{\mu\nu}=g_{\mu\nu}+\frac{u_\mu u_\nu}{c^2}.
+\end{equation}
+The covariant derivative separates as
+\begin{equation}
+\nabla_\mu u_\nu=\frac13\theta h_{\mu\nu}+\sigma_{\mu\nu}
++\omega_{\mu\nu}-\frac{u_\mu a_\nu}{c^2}.
+\end{equation}
+Here $\theta$ is the local volume-change rate, $\sigma$ is the anisotropic deformation rate, $\omega$ is vorticity, and $a$ is proper acceleration. This is the standard congruence description \parencite{EllisVanElst1999}.
+
+The description is useful because it separates effects that a single image of moving substance would merge. In homogeneous cosmology, the comoving congruence has $\theta=3H$ and zero shear, vorticity, and acceleration. For static supported observers, all three spatial kinematic rates can vanish while the proper acceleration is $a_\mu=c^2D_\mu\ln N$. An expanding universe therefore need not swirl, and static gravity need not involve expanding observer volume.
+
+Rotation requires additional care. The zero-angular-momentum observers used in a circular stationary-axisymmetric geometry are hypersurface normal and have zero vorticity, even though their angular velocity relative to an appropriate asymptotic reference can reflect frame dragging \parencite{Gourgoulhon2010}. Conversely, rotating observers in flat spacetime can have nonzero vorticity. The congruence and reference observers must be specified before assigning a physical interpretation to rotational quantities.
+
+Likewise, shear is not curvature itself. In a weak vacuum transverse--traceless (TT) wave, a chosen freely falling congruence has $\sigma_{ij}=\dot h^{\TT}_{ij}/2$ at first order, while its tidal acceleration per unit separation involves $\ddot h^{\TT}_{ij}/2$. A static congruence can have zero shear in the presence of nonzero tides. Geometry gives these relations, the curvature convention, and the corrected Raychaudhuri identity in full.
+
+The result is an effective interpretive vocabulary, not a source mechanism. All these quantities are calculated after $g$ and $u$ have been supplied. Declaring them to be manifestations of $\PhiSrc$ without a map would rename target objects rather than derive them.
+
+\section{Explanatory value and empirical limits}
+A physical interpretation may be useful by clarifying concepts, suggesting a mathematical construction, or connecting otherwise separate phenomena. Those possibilities should be evaluated directly. They do not follow automatically from exact agreement with a theory that was adopted at the outset.
+
+For this proposal, the key explanatory question is whether source assumptions can eventually reduce what must be independently assumed at effective level. If a derivation simply postulates a Lorentzian metric with Einstein--Hilbert dynamics under new names, the measured theory may be sound but the intended explanation has not advanced. If instead independently specified source relations imply an operational causal structure, a metric, or part of its dynamics, the scope and assumptions of that result can be assessed.
+
+Empirical equivalence also limits confirmation. Where the proposed description and ordinary GR assign the same outcomes to every measurement by construction, a successful GR test does not discriminate in favor of this source ontology over GR without it. This does not logically refute the ontology. It means that its additional explanatory claim needs evidence of its own, such as a demonstrable reduction of assumptions or a discriminating prediction from a completed model.
+
+The sparse source specification cannot currently support a full consistency assessment. Without defined source states and dynamics, one cannot count its propagating modes, derive its conservation laws, or establish its stability. The absence of those definitions is a concrete limitation, not a theorem that no suitable definitions can be found.
+
+\section{Relationship to other gravitational approaches}
+\subsection{Standard GR and preferred-structure theories}
+The effective benchmark is ordinary GR. Congruence kinematics and Arnowitt--Deser--Misner (ADM) variables are standard ways to analyze that theory, not additional evidence for a source ontology. The word \Aether{} must therefore be distinguished from its use in other actions.
+
+Einstein-aether theory introduces a dynamical unit timelike vector and studies its coupled gravitational modes \parencite{JacobsonMattingly2001,JacobsonMattingly2004}. Ho\v{r}ava's proposal instead uses anisotropic short-distance scaling and a different spacetime-symmetry setup \parencite{Horava2009}. The present effective action introduces neither structure. A future source completion that produced observable preferred structure would need a new analysis rather than relying on this terminological distinction.
+
+\subsection{Derivational and analogue approaches}
+Several established lines of work seek relations between Einsteinian dynamics and other principles. Jacobson's thermodynamic argument uses horizon entropy and the heat relation for local causal horizons \parencite{Jacobson1995}. Induced-gravity arguments concern how gravitational terms can arise in an effective description of other fields \parencite{Visser2002}. Self-coupling arguments begin with a defined gauge field and use consistency requirements to motivate nonlinear interactions \parencite{Deser2004}. Analogue-gravity systems can reproduce aspects of effective Lorentzian propagation without automatically reproducing the full Einstein dynamics \parencite{BarceloLiberatiVisser2011}.
+
+These are comparisons of explanatory tasks, not derivations of the present proposal. Each begins with definite mathematical and physical assumptions. The untyped source placeholder here does not inherit their conclusions. Related questions about canonical reconstruction and uniqueness likewise require their own hypotheses; general covariance or four-dimensionality alone is not the missing argument.
+
+\section{Conclusion}
+The \Aflow{} Interpretation of Relativity presently combines a tentative source ontology with an adopted GR model. Observer congruences make its effective flow language precise, but do not convert that language into a derivation of spacetime, matter, or clocks. Its standard relativistic predictions are inherited under explicit matching conditions.
+
+The proposal's unresolved question is therefore clear: can a defined source structure produce some or all of the effective relational and dynamical content without importing that content as a premise? The adopted GR model supplies an intelligible benchmark for addressing that question. This benchmark neither establishes the physical reality of the proposed source nor shows that all future source constructions must fail.
+
+\References
+\end{document}

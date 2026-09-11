@@ -1,0 +1,2 @@
+# Preserve canonical PDFs as binary files.
+*.pdf binary

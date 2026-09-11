@@ -1,0 +1,225 @@
+\documentclass[11pt]{article}
+\newcommand{\ArticleShort}{Relativistic recovery}
+\input{shared/preamble.tex}
+% Copyright footer added 10 September 2026.
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
+\fancyfoot[R]{\small\thepage}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
+  \fancyfoot[R]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\begin{document}
+\PaperTitle{Relativistic Recovery and Operational Predictions}{}{Because the effective \Aflow{} model adopts general relativity, its relativistic predictions are inherited when the matter model, constants, solutions, and measurement procedures are held fixed. This paper makes that conditional statement explicit and develops representative calculations: the Newtonian weak-field limit, vacuum light propagation, static gravitational redshift, proper-time measurements, and homogeneous cosmological evolution. A cosmological constant is distinguished from a general dynamical dark-energy component, and local special relativity is distinguished from finite-region flatness. The calculations specify what an eventual source theory would have to reproduce. They do not supply a source construction of the metric, operational clocks, or the Einstein equation.}
+
+\section{Recovery as a statement about the effective model}
+There are two meanings of recovering relativity. A proposed modification might approach GR in a limit. A source theory might also produce a relativistic spacetime and its equations from other variables. Neither is demonstrated merely by adopting the Einstein--Hilbert action. Here, ``recovery'' refers to obtaining familiar operational results from an effective model already fixed to GR.
+
+This is still worth making explicit. A field equation is not the whole content of a prediction: one must choose a matter model, a solution, and a procedure for comparing clocks or signals. The calculations below make those choices visible in simple regimes. They also provide concrete targets for the open source program.
+
+The source arena $\Sub$ is not identified with physical spacetime $M$, and the placeholder $\PhiSrc$ remains untyped. No source clock, causal order, or reconstruction map is used in the following derivations. The physical interpretation of the source proposal must therefore remain separate from the established meaning of the effective observables.
+
+\section{Exact relation to the corresponding GR model}
+Use signature $(-+++)$ and length-valued coordinates $x^0=ct$ in covariant action integrals. The effective action and equation are
+\begin{align}
+S_{\rm eff}&=\frac{c^3}{16\pi G}\int_M\dd^4x\sqrt{-g}(R-2\Lambda)+S_m[g,\psi],
+\label{eq:SA}\\
+G_{\mu\nu}+\Lambda g_{\mu\nu}&=\frac{8\pi G}{c^4}T_{\mu\nu},
+\quad T_{\mu\nu}=-\frac{2c}{\sqrt{-g}}\frac{\delta S_m}{\delta g^{\mu\nu}}.
+\label{eq:einstein}
+\end{align}
+The matter action uses the same operative metric. Its fields and interactions must be specified, with standard locally Lorentz-invariant matter assumed for the usual clock and light interpretation.
+
+Let $\mathcal D$ denote matching constants, initial and boundary data, and a corresponding physical solution; let $\mathcal P$ denote the same measurement procedure. Then
+\begin{equation}
+\mathcal O_{\text{\Aflow}}(\mathcal D,\mathcal P)
+=\mathcal O_{\rm GR}(\mathcal D,\mathcal P)
+\label{eq:obsidentity}
+\end{equation}
+provided the effective solution class and observable definitions also coincide and the source interpretation introduces no additional restriction or coupling. The equality follows because the two sides evaluate the same effective model. It is not a new empirical fit or a proof of source emergence.
+
+An unspecified $S_m$ leaves a family of models rather than one prediction. Likewise, a hidden condition selecting different solutions would have to be included in \eqref{eq:obsidentity}; equality of the Einstein equations alone would not establish the stated equivalence.
+
+\section{Weak-field gravity}
+\subsection{Newtonian potential and spatial curvature}
+For an isolated slowly moving source, assume negligible leading pressure and anisotropic stress, weak quasi-static fields, and boundary conditions selecting the usual isolated-source solution. In this section $\Lambda=0$, or its contribution is negligible on the region's scale $L$. Write
+\begin{equation}
+g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu},\qquad |h_{\mu\nu}|\ll1.
+\label{eq:linearizedmetric}
+\end{equation}
+The leading field equation gives
+\begin{equation}
+\nabla^2\Ph=4\pi G\rho,
+\label{eq:poisson}
+\end{equation}
+where $\rho$ is the mass density and $\Ph$ has dimensions of velocity squared. In an isotropic chart, the metric through first order is
+\begin{equation}
+\dd s^2\simeq-\left(1+\frac{2\Ph}{c^2}\right)c^2\dd t^2+
+\left(1-\frac{2\gamma\Ph}{c^2}\right)\delta_{ij}\dd x^i\dd x^j,
+\label{eq:weakfield}
+\end{equation}
+with
+\begin{equation}
+\gamma=1.
+\label{eq:ppngamma}
+\end{equation}
+The parameter $\gamma$ measures the coefficient of spatial curvature relative to the Newtonian potential in this weak-field parametrization. Its value here is inherited from GR, not computed from an independent source-flow law \parencite{Carroll1997}.
+
+For a localized positive mass $M$, the exterior potential is $\Ph=-GM/r$ at leading order. Both the temporal and spatial parts of \eqref{eq:weakfield} matter for light propagation. A model that matched only the slow-motion acceleration would not thereby have shown the same light deflection or travel-time delay. In the present benchmark those comparisons agree because the full effective metric and light law agree.
+
+\subsection{Slow test-particle motion}
+The leading connection in length-valued time coordinates is $\Gamma^i{}_{00}=\partial_i\Ph/c^2$. The geodesic equation for a neutral structureless test particle gives
+\begin{equation}
+\frac{\dd^2x^i}{\dd t^2}=-\partial_i\Ph+O(c^2\epsilon^2/L),
+\label{eq:newtonianlimit}
+\end{equation}
+where $\epsilon=\sup|\Ph|/c^2\ll1$, $v^2/c^2=O(\epsilon)$, and fields vary on spatial scale $L$. The remainder is an acceleration estimate under those assumptions, not a complete post-Newtonian expression. The diagonal metric corrections omitted in the static approximation are dimensionless $O(\epsilon^2)$ terms.
+
+The acceleration is attractive for the isolated potential just specified. A static supported observer instead needs a proper acceleration approximately $+\boldsymbol\nabla\Ph$. Distinguishing support from free fall is important when interpreting the lapse gradient as a flow-related quantity.
+
+\section{Light and causal structure}
+For standard Maxwell theory in vacuum, the geometric-optics wave covector is locally the gradient of a phase. At leading order it satisfies
+\begin{equation}
+g^{\mu\nu}k_\mu k_\nu=0.
+\label{eq:null}
+\end{equation}
+Because $\nabla_\mu k_\nu=\nabla_\nu k_\mu$, differentiation of $k_\mu k^\mu=0$ gives
+\begin{equation}
+k^\nu\nabla_\nu k^\mu=0
+\label{eq:nullgeodesic}
+\end{equation}
+with the natural affine parametrization. Thus the same metric determines the vacuum light cone and its ray trajectories. These statements are restricted to the specified geometric-optics regime, not arbitrary propagation through a dispersive medium.
+
+At a point $p$, local inertial coordinates satisfy
+\begin{equation}
+g_{ab}(p)=\eta_{ab},\qquad \partial_cg_{ab}(p)=0.
+\label{eq:localinertial}
+\end{equation}
+In the associated local orthonormal frame the null condition is
+\begin{equation}
+-c^2\dd t_{\rm loc}^2+\dd\ell_{\rm loc}^2=0,
+\label{eq:localminkowski}
+\end{equation}
+so the measured vacuum light speed is
+\begin{equation}
+\frac{\dd\ell_{\rm loc}}{\dd t_{\rm loc}}=c.
+\label{eq:localc}
+\end{equation}
+A coordinate speed in an extended curved chart can differ from $c$. That is not a second local light speed or evidence for propagation through a material \Aether{} wind. Over a finite region of scale $\ell$, curvature corrections are controlled by $\ell^2/\mathcal R^2$ when that ratio is small; they cannot generally be removed throughout the region by changing coordinates.
+
+\section{Static gravitational redshift and clocks}
+Consider a static region with positive lapse $N(\mathbf x)$:
+\begin{equation}
+\dd s^2=-N(\mathbf x)^2c^2\dd t^2+\gamma_{ij}(\mathbf x)\dd x^i\dd x^j.
+\label{eq:staticmetric}
+\end{equation}
+The coordinates here use $t$ in seconds. For an observer fixed at $\mathbf x$,
+\begin{equation}
+\dd\tau=N(\mathbf x)\dd t,\qquad u=N^{-1}\partial_t.
+\label{eq:stationaryclock}
+\end{equation}
+The Killing vector $K=\partial_t$ generates the time-translation symmetry. Along a null geodesic, $-k_\mu K^\mu$ is conserved. The frequency measured by a static observer is proportional to $-k_\mu u^\mu$, and therefore to $1/N$. For a signal emitted at $E$ and received at $R$,
+\begin{equation}
+\frac{\nu_R}{\nu_E}=\frac{N_E}{N_R}.
+\label{eq:redshift}
+\end{equation}
+The formula compares specified static observers and the same freely propagating signal. Moving emitters or receivers introduce additional Doppler factors.
+
+In the weak field,
+\begin{equation}
+N=1+\frac{\Ph}{c^2}+O(\epsilon^2),
+\label{eq:lapseweakfield}
+\end{equation}
+which gives
+\begin{equation}
+\frac{\nu_R-\nu_E}{\nu_E}=\frac{\Ph_E-\Ph_R}{c^2}+O(\epsilon^2).
+\label{eq:weakredshift}
+\end{equation}
+Light climbing from a lower potential is redshifted relative to the receiver's clock. This result follows from static symmetry and local frequency measurement, not from a separately specified source clock.
+
+More generally, an ideal clock records
+\begin{equation}
+\tau[\Gamma]=\frac1c\int_\Gamma\sqrt{-g_{\mu\nu}\dd x^\mu\dd x^\nu}.
+\label{eq:propertime}
+\end{equation}
+Comparing different worldlines can therefore produce different elapsed times. That path dependence is part of the adopted relativistic model. The current ontology has not derived a source functional whose calibrated value reproduces \eqref{eq:propertime}.
+
+\section{Homogeneous cosmology}
+\subsection{Geometry and expansion}
+For the homogeneous and isotropic benchmark, use the Friedmann--Lema\^itre--Robertson--Walker (FLRW) metric
+\begin{equation}
+\dd s^2=-c^2\dd t^2+a(t)^2\left[
+\frac{\dd r^2}{1-kr^2}+r^2\dd\Omega^2\right].
+\label{eq:flrwmetric}
+\end{equation}
+Here $a$ has dimensions of length, $r$ is dimensionless, $k=0,\pm1$, and $\dd\Omega^2$ is the unit-sphere metric. Cosmic time $t$ is proper time along the comoving congruence. Define
+\begin{equation}
+H=\frac{\dot a}{a}.
+\label{eq:hubble}
+\end{equation}
+For $u=\partial_t$, the congruence expansion is
+\begin{equation}
+\theta=\nabla_\mu u^\mu=3H.
+\label{eq:theta3h}
+\end{equation}
+The result measures a fractional volume-change rate: a comoving volume scales as $a^3$. It does not require expansion into an external physical space.
+
+\subsection{Friedmann equations and acceleration}
+Let $\rho$ and $p$ denote the total mass-equivalent density and pressure of non-$\Lambda$ matter in a comoving perfect-fluid description. Einstein's equation gives
+\begin{equation}
+H^2=\frac{8\pi G}{3}\rho+\frac{\Lambda c^2}{3}-\frac{kc^2}{a^2},
+\label{eq:friedmann1}
+\end{equation}
+\begin{equation}
+\frac{\ddot a}{a}=-\frac{4\pi G}{3}\left(\rho+\frac{3p}{c^2}\right)
++\frac{\Lambda c^2}{3}.
+\label{eq:friedmann2}
+\end{equation}
+The continuity equation is
+\begin{equation}
+\dot\rho+3H\left(\rho+\frac{p}{c^2}\right)=0.
+\end{equation}
+These equations, with an equation of state and initial data, specify the homogeneous model \parencite{EllisVanElst1999,Carroll1997}.
+
+Positive $\Lambda$ contributes toward acceleration, but net $\ddot a>0$ requires the positive term to exceed the total matter focusing term. Equivalently, moving $\Lambda$ into the fluid side gives a vacuum component with $p_\Lambda=-\rho_\Lambda c^2$. It must not be counted on both sides. A component with sufficiently negative pressure contributes toward defocusing; it need not dominate the total at every epoch.
+
+One may instead specify a dynamical dark-energy model with
+\begin{equation}
+p_{\rm DE}=w(a)\rho_{\rm DE}c^2.
+\label{eq:wa}
+\end{equation}
+That is not generally equivalent to constant $\Lambda$. The background relation must be supplemented by conservation or exchange equations and, for perturbative predictions, a matter model or suitable perturbation closure. An arbitrary conserved tensor is not a complete physical specification.
+
+Supernova observations and Planck results motivate the accelerated cosmological models considered here \parencite{Riess1998,Perlmutter1999,Planck2018Parameters}. The present calculations inherit those models' equations; they contain no new fit and provide no evidence that dark energy originates in $\PhiSrc$.
+
+\subsection{Cosmological redshift}
+For comoving emission and reception in FLRW, radial null propagation and the comparison of successive wave crests give
+\begin{equation}
+1+z=\frac{\nu_E}{\nu_R}=\frac{a(t_R)}{a(t_E)}.
+\end{equation}
+This redshift has a different geometric setting from the static-lapse result. Both are evaluations of frequency relative to specified observers along a null signal. Their common operational basis is the metric and matter law, not an uncalibrated source-order parameter.
+
+\section{Local special relativity and spatial measurement}
+In a local inertial frame, a massive clock with measured speed $v<c$ satisfies
+\begin{equation}
+\dd\tau=\dd t_{\rm loc}\sqrt{1-v^2/c^2}.
+\label{eq:kinematictimedilation}
+\end{equation}
+The tangent-space Lorentz symmetry and the local null cone remain the usual ones. Introducing an observer family for interpretation does not designate it as the preferred family for the laws of physics. A future source model that selected an observable preferred frame would need to demonstrate how its consequences satisfy or depart from the intended benchmark.
+
+Relative to a normalized observer $u$, local spatial projections use
+\begin{equation}
+h_{\mu\nu}=g_{\mu\nu}+\frac{u_\mu u_\nu}{c^2}.
+\label{eq:spatialprojector}
+\end{equation}
+This projector supplies a three-dimensional rest space at each event. It does not automatically define a global simultaneous space, and it is not a derivation of an experiential slice inside $\Sub$. The term S-time likewise remains an interpretive target. The measured duration appearing in this paper is ordinary $\tau$, with no additional source-time law assumed.
+
+\section{Conclusion}
+The effective framework reproduces the stated weak-field, optical, clock, and cosmological relations because it uses the same relativistic equations and measurement rules as the corresponding GR model. The calculations show the role of pressure assumptions, observer motion, symmetry, length scales, and matter specification; those conditions are part of each result.
+
+They also clarify the remaining task. A source theory would have to reproduce not only a tensor equation but the operational structures that turn its solutions into predictions. No such source-to-metric, source-to-matter, or source-to-clock map has been established by adopting GR. The present benchmark provides explicit comparison targets without conflating them with a completed derivation.
+\References
+\end{document}

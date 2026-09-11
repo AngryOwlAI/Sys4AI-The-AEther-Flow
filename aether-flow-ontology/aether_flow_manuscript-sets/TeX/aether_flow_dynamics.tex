@@ -1,0 +1,219 @@
+\documentclass[11pt]{article}
+\newcommand{\ArticleShort}{Dynamics}
+\input{shared/preamble.tex}
+% Copyright footer added 10 September 2026.
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
+\fancyfoot[R]{\small\thepage}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
+  \fancyfoot[R]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\begin{document}
+\PaperTitle{Effective Dynamics and Matter Coupling}{}{The effective dynamics of the \Aflow{} Interpretation of Relativity are specified by the Einstein--Hilbert action with ordinary matter and an optional cosmological constant. This is an adopted general-relativistic model, not an action derived from the unresolved source structure. We fix the units of the action and stress tensor, derive the bulk field equation, distinguish total conservation from separate component conservation, and identify the assumptions behind the standard particle, light, and clock descriptions. A weak-field calculation recovers Poisson's equation and the leading Newtonian acceleration with dimensionally consistent error estimates. The resulting benchmark is exact at the level of its stated classical equations; source dynamics, a reconstruction map, and the selection of a particular matter model remain separate requirements.}
+
+\section{What is being specified}
+An interpretation becomes a predictive physical model only after its fields, equations, and measurement rules have been fixed. In this framework, the effective gravitational choice is explicit: retain general relativity (GR), rather than introduce an additional low-energy \Aflow{} field. The purpose of this paper is to state that choice in a form that can be varied, checked, and used in calculations.
+
+The distinction from the source proposal is essential. Foundations uses $\Sub$ for a smooth four-dimensional source arena and $\PhiSrc$ for an unresolved source-order or evolution structure. Neither is identified here with physical spacetime or an observer velocity. The effective fields instead live on a separate manifold $M$ and are governed by the action below. No inference from the source assumptions to that action is claimed.
+
+Three possible research strategies should not be confused. One could propose a modified gravitational action and compare its predictions with GR. One could seek a source construction that reproduces GR. Or one could adopt GR and investigate an interpretation of it. The present effective paper follows the third strategy while leaving the second as an open research goal. It does not accomplish the second merely by avoiding the first.
+
+\section{Conventions and model specification}
+The spacetime $(M,g)$ is a smooth, time-oriented four-dimensional Lorentzian manifold, with signature $(-+++)$ and Levi-Civita connection $\nabla$. Greek indices range over $0,1,2,3$. The curvature convention is
+\begin{equation}
+[\nabla_\mu,\nabla_\nu]V^\rho=R^\rho{}_{\sigma\mu\nu}V^\sigma,
+\qquad R_{\mu\nu}=R^\rho{}_{\mu\rho\nu}.
+\end{equation}
+Coordinates in the covariant action have dimensions of length; in a time-adapted chart $x^0=ct$. When a metric is instead written with $t$ in seconds, the displayed $\dd t$ and factors of $c$ implement that coordinate change. Tensor equations do not depend on the chosen chart.
+
+The matter fields are denoted collectively by $\psi$. Their action must be specified for an actual prediction. ``Ordinary matter'' here means a matter model with the appropriate locally Lorentz-invariant laws and standard coupling to $g$; it does not mean every arbitrary Lagrangian containing a metric. Stability, characteristics, and interactions of a chosen matter sector require their own assessment.
+
+The free constants include $G>0$ and a constant $\Lambda$. Initial and boundary conditions, topology, and the domain of the solution must also be supplied for a particular physical problem. They are not selected by the phrase exact closure.
+
+\section{Action and bulk field equation}
+The gravitational benchmark is
+\begin{equation}
+S_{\mathrm{eff}}[g,\psi]=\frac{c^3}{16\pi G}
+\int_M\dd^4x\sqrt{-g}(R-2\Lambda)+S_m[g,\psi].
+\label{eq:SA_lambda}
+\end{equation}
+Setting $\Lambda=0$ recovers the Einstein--Hilbert form
+\begin{equation}
+S_{\mathrm{eff}}\big|_{\Lambda=0}
+=\frac{c^3}{16\pi G}\int_M\dd^4x\sqrt{-g}R+S_m[g,\psi].
+\label{eq:SA}
+\end{equation}
+Both $S_m$ and the gravitational term have units of action. Since $\dd^4x$ has dimensions $L^4$ and $R$ has dimensions $L^{-2}$ in this coordinate convention, the factor $c^3/G$ provides the required normalization.
+
+Define the physical stress--energy tensor by
+\begin{equation}
+T_{\mu\nu}:=-\frac{2c}{\sqrt{-g}}
+\frac{\delta S_m}{\delta g^{\mu\nu}}.
+\label{eq:stress}
+\end{equation}
+The factor of $c$ is required when $x^0=ct$ and $S_m$ is a physical action. An equivalent convention could rescale the matter action, but then its variational definition would need to say so. With \eqref{eq:stress},
+\begin{equation}
+\delta S_m=-\frac{1}{2c}\int_M\dd^4x\sqrt{-g}\,
+T_{\mu\nu}\delta g^{\mu\nu}
+\end{equation}
+on the matter equations, apart from boundary terms associated with the chosen variations.
+
+For compactly supported metric variations, the bulk variation of the full action is
+\begin{equation}
+\delta S_{\mathrm{eff}}=
+\int_M\dd^4x\sqrt{-g}\left[
+\frac{c^3}{16\pi G}(G_{\mu\nu}+\Lambda g_{\mu\nu})-
+\frac{T_{\mu\nu}}{2c}\right]\delta g^{\mu\nu}.
+\end{equation}
+Stationarity for arbitrary such variations gives
+\begin{equation}
+\boxed{G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}.}
+\label{eq:einstein_lambda}
+\end{equation}
+For $\Lambda=0$, this becomes
+\begin{equation}
+G_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}.
+\label{eq:einstein}
+\end{equation}
+The calculation is the standard metric variation of GR, with the unit convention made explicit \parencite{Carroll1997}. It establishes what follows from \eqref{eq:SA_lambda}, not why a source ontology should produce that action.
+
+A finite-boundary problem needs an appropriate boundary action and boundary data. The Einstein--Hilbert integrand alone contains boundary variations involving derivatives of $\delta g$. Compact support avoids that issue for the bulk derivation; it is not a substitute for specifying boundary terms when the physical problem requires them.
+
+\section{Cosmological constant and other dark-energy models}
+A cosmological constant can be kept on the geometric side of \eqref{eq:einstein_lambda}, or moved to the matter side as the specific tensor
+\begin{equation}
+T^{(\Lambda)}_{\mu\nu}=-\frac{\Lambda c^4}{8\pi G}g_{\mu\nu}.
+\label{eq:de_sector}
+\end{equation}
+These are exactly equivalent descriptions of the same constant term, not two independent sources to be counted together. In perfect-fluid language, with $\rho$ denoting mass-equivalent density,
+\begin{equation}
+\rho_\Lambda=\frac{\Lambda c^2}{8\pi G},\qquad
+p_\Lambda=-\rho_\Lambda c^2.
+\end{equation}
+Metric compatibility makes \eqref{eq:de_sector} covariantly conserved for constant $\Lambda$.
+
+An arbitrary dark-energy field or fluid is not equivalent to \eqref{eq:de_sector}. It may remain within GR as part of $S_m$, but its equations, perturbations, and initial data then belong to a different matter model. A phenomenological relation $p_{\rm DE}=w(a)\rho_{\rm DE}c^2$ specifies a homogeneous background relation only; it need not determine sound speeds, anisotropic stress, or interactions. Those details cannot be replaced by the statement that the stress tensor is conserved.
+
+The cosmological discussion uses the supernova evidence for accelerated expansion and a conventional $\Lambda$CDM benchmark \parencite{Riess1998,Perlmutter1999,Planck2018Parameters}. Here these are historical reference points. Neither an added $\Lambda$ nor a chosen dark-energy stress tensor derives GR from $\Sub$ and $\PhiSrc$, or identifies the physical origin of vacuum energy.
+
+\section{Matter equations and conservation}
+Variation with respect to the matter variables supplies their own equations of motion. On a solution, the contracted Bianchi identity and metric compatibility give
+\begin{equation}
+\nabla^\mu T_{\mu\nu}=0.
+\label{eq:conservation}
+\end{equation}
+This is local covariant conservation of total nongravitational stress--energy. It does not by itself define a globally conserved total energy in every spacetime, nor does it provide a local tensor for gravitational energy. Global charges require suitable symmetries or boundary structure \parencite{Carroll1997,ADM1962}.
+
+For components $T^{(A)}_{\mu\nu}$, interactions can exchange energy and momentum:
+\begin{equation}
+\nabla^\mu T^{(A)}_{\mu\nu}=Q^{(A)}_\nu,
+\qquad \sum_A Q^{(A)}_\nu=0.
+\end{equation}
+Separate conservation is an additional no-exchange condition, not a consequence of total conservation alone. For example, a separately modeled dark-energy component must either satisfy that condition or supply its exchange law.
+
+For a perfect fluid comoving with a normalized four-velocity $u$, the convention used here is
+\begin{equation}
+T_{\mu\nu}=\left(\rho+\frac{p}{c^2}\right)u_\mu u_\nu+p\,g_{\mu\nu},
+\qquad u^\mu u_\mu=-c^2.
+\end{equation}
+Its locally measured energy density is $\rho c^2$. This convention prevents the Friedmann and Raychaudhuri equations from mixing mass density with energy density.
+
+\section{Metric, trajectories, and measurements}
+The metric assigns a tangent vector $X$ its causal type:
+\begin{equation}
+g(X,X)<0\ \hbox{timelike},\quad
+g(X,X)=0\ \hbox{null},\quad
+g(X,X)>0\ \hbox{spacelike},
+\label{eq:causalclassification}
+\end{equation}
+with the zero vector excluded when classifying null directions. A time orientation selects the future timelike cone without supplying a preferred observer congruence.
+
+An ideal clock following a timelike curve measures
+\begin{equation}
+\dd\tau^2=-\frac{1}{c^2}g_{\mu\nu}\dd x^\mu\dd x^\nu.
+\label{eq:propertime}
+\end{equation}
+The action $S_p=-mc^2\int\dd\tau$ for a neutral structureless test particle gives
+\begin{equation}
+\frac{\dd^2x^\mu}{\dd\tau^2}+\Gamma^\mu{}_{\alpha\beta}
+\frac{\dd x^\alpha}{\dd\tau}\frac{\dd x^\beta}{\dd\tau}=0.
+\label{eq:geodesic}
+\end{equation}
+This description neglects external forces, spin, finite size, and significant self-gravity. A charged particle or a supported observer need not follow a geodesic.
+
+For standard Maxwell matter in vacuum, the leading geometric-optics limit gives
+\begin{equation}
+g_{\mu\nu}k^\mu k^\nu=0,\qquad k^\nu\nabla_\nu k^\mu=0,
+\label{eq:null}
+\end{equation}
+with an affine parametrization. Finite wavelengths, a material medium, or modified electromagnetic dynamics require a separate analysis. There is no second optical metric postulated here.
+
+At an event $p$, a local inertial chart satisfies
+\begin{equation}
+g_{ab}(p)=\eta_{ab},\qquad \partial_cg_{ab}(p)=0.
+\label{eq:localinertial}
+\end{equation}
+Curvature remains in the second derivatives. The local special-relativistic description is exact at the tangent-space level, while a finite laboratory has curvature corrections of relative order $\ell^2/\mathcal R^2$ when its characteristic size $\ell$ is small compared with a curvature radius $\mathcal R$.
+
+\section{Weak-field limit}
+Consider an isolated, slowly moving source with negligible pressure at leading order, no leading anisotropic stress, and weak nearly static fields. Let
+\begin{equation}
+g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu},\qquad |h_{\mu\nu}|\ll1.
+\label{eq:linearizedmetric}
+\end{equation}
+This section uses $\Lambda=0$, or a region where $|\Lambda|L^2$ is negligible relative to the weak Newtonian potential $\epsilon=\sup|\Ph|/c^2$. Boundary conditions select the usual decaying isolated-source solution.
+
+The leading Einstein equation gives
+\begin{equation}
+\nabla^2\Ph=4\pi G\rho.
+\label{eq:poisson}
+\end{equation}
+In an isotropic weak-field chart,
+\begin{equation}
+h_{00}=-\frac{2\Ph}{c^2},\qquad h_{ij}=-\frac{2\Ph}{c^2}\delta_{ij},
+\label{eq:hweakfield}
+\end{equation}
+at leading order. Thus the metric through first order is
+\begin{equation}
+\dd s^2\simeq-\left(1+\frac{2\Ph}{c^2}\right)c^2\dd t^2+
+\left(1-\frac{2\Ph}{c^2}\right)\delta_{ij}\dd x^i\dd x^j.
+\label{eq:weakfield}
+\end{equation}
+The omitted dimensionless diagonal metric components are $O(\epsilon^2)$ in the static expansion; velocity-dependent components enter at their appropriate post-Newtonian orders. Comparing the spatial coefficient with $1-2\gamma\Ph/c^2$ gives
+\begin{equation}
+\gamma=1.
+\label{eq:gamma}
+\end{equation}
+This is the familiar GR parameter in this weak isolated-source regime, not an independent constraint obtained from $\PhiSrc$.
+
+The leading connection is $\Gamma^i{}_{00}=\partial_i\Ph/c^2$. Since $\dd x^0/\dd t=c$, the slow-motion geodesic equation gives
+\begin{equation}
+\frac{\dd^2x^i}{\dd t^2}=-\partial_i\Ph+O(c^2\epsilon^2/L),
+\label{eq:newtonianlimit}
+\end{equation}
+where $v^2/c^2=O(\epsilon)$ and derivatives vary on scale $L$. The estimate has acceleration units. It summarizes the size of terms omitted in the stated quasi-static regime; it is not a substitute for a full post-Newtonian calculation when those terms are needed.
+
+\section{What the flow language adds, and what it does not}
+An observer congruence can be introduced after a solution $(M,g,\psi)$ has been chosen. Its expansion, shear, vorticity, and acceleration describe the neighboring observer worldlines. These are useful ways to organize cosmological expansion, static support, and relative motion. Geometry develops them explicitly.
+
+There is no separate variation with respect to that interpretive congruence in \eqref{eq:SA_lambda}. If $u$ is a matter-fluid velocity, its behavior follows from the specified matter model. If it denotes a family of measuring observers, its choice describes the measurement setup. Neither role supplies a new gravitational field equation or fixes the meaning of $\PhiSrc$.
+
+A source action remains a requirement, not an executable variational principle. A future expression such as
+\begin{equation}
+S_{\rm src}[q]=\int_{\Sub}\mathcal L_{\rm src}[q]
+\label{eq:substrateaction}
+\end{equation}
+would require a defined source configuration $q$ and an integrable top-degree form or density $\mathcal L_{\rm src}$, together with a domain, variations, and any boundary terms. None of these is adopted merely by displaying the schematic integral. In particular, a source measure or metric cannot be supplied without acknowledgment to make it look complete.
+
+\section{Exact closure and remaining questions}
+The effective gravitational equations are fixed by the adopted action. Their equality to the corresponding GR equations is exact, not only weak-field. Observational equality further requires the same matter sector, constants, solution class, and experimental interpretation. A source-based selection rule or new matter coupling would need a fresh comparison.
+
+Retaining this benchmark when a speculative extension fails is a reasonable comparison policy. It does not turn the source ontology into a verified theory or guarantee the consistency of later additions. Likewise, the standard conservation law and geodesic limit do not constrain undefined source degrees of freedom.
+
+The central result of this paper is therefore a correctly normalized effective model and its representative limits. It supplies the equations needed for the companion analyses, while leaving the source origin of spacetime, gravity, matter, clocks, and the constants $G$ and $\Lambda$ unresolved.
+\References
+\end{document}

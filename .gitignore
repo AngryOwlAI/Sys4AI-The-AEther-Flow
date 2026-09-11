@@ -1,0 +1,39 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+credentials.json
+
+# LaTeX build intermediates (canonical manuscript PDFs are versioned)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.xdv
+*.dvi
+
+# Local caches and temporary build directories
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.cache/
+build/
+dist/
+*.tmp
+*.swp
+*~

@@ -1,0 +1,197 @@
+\documentclass[11pt]{article}
+\newcommand{\ArticleShort}{Consistency}
+\input{shared/preamble.tex}
+% Copyright footer added 10 September 2026.
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
+\fancyfoot[R]{\small\thepage}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
+  \fancyfoot[R]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\begin{document}
+\PaperTitle{Gravitational Degrees of Freedom and Perturbative Consistency}{}{The effective gravitational sector of the \Aflow{} Interpretation of Relativity is general relativity, so its local mode count and linearized gauge structure are those of the adopted metric theory. We display the Ricci-flat linearized equation, the scalar--vector--tensor decomposition on Minkowski spacetime, and the Hamiltonian count of two local gravitational configuration degrees of freedom. For radiative vacuum perturbations about Minkowski spacetime, the transverse-traceless action has positive quadratic energy when Newton's constant is positive and gives the massless dispersion relation. These results exclude additional \Aflow{} gravitational modes from the stated effective action. They do not prove stability on arbitrary backgrounds, global regularity, or consistency of the untyped source proposal.}
+
+\section{The consistency question}
+A claim that a gravitational theory is ``healthy'' can mean several different things. It may mean that no physical mode has a negative kinetic term, that the equations admit a well-posed local evolution problem, that a particular background has no growing perturbations, or that solutions avoid singularities. These are not interchangeable claims. This paper identifies which of them follow from the effective model adopted here.
+
+The adopted gravitational action is the Einstein--Hilbert action. No independent vector, scalar, or other \Aflow{} gravitational field is added. Consequently, the following calculation is a check of the standard effective GR sector rather than a new source-level consistency proof. The source objects $\Sub$ and $\PhiSrc$ are not yet defined by the state space, action, or evolution law needed for such a proof.
+
+The main calculation concerns vacuum radiative perturbations about Minkowski spacetime. A more general Ricci-flat background is included to display how curvature enters the linearized equation. Matter and cosmological backgrounds are discussed as separate cases whose stability cannot be inferred from the flat calculation alone.
+
+\section{Action and admissible backgrounds}
+We use signature $(-+++)$, length-valued covariant coordinates with $x^0=ct$, and
+\begin{equation}
+[\nabla_\mu,\nabla_\nu]V^\rho=R^\rho{}_{\sigma\mu\nu}V^\sigma.
+\end{equation}
+The effective action is
+\begin{equation}
+S_{\mathrm{eff}}[g,\psi]=\frac{c^3}{16\pi G}
+\int_M\dd^4x\sqrt{-g}(R-2\Lambda)+S_m[g,\psi],
+\label{eq:SA}
+\end{equation}
+where $G>0$ and the physical-action stress tensor is
+$T_{\mu\nu}=-(2c/\sqrt{-g})\delta S_m/\delta g^{\mu\nu}$. Its field equation is
+\begin{equation}
+G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}.
+\label{eq:einstein}
+\end{equation}
+A perturbation background must solve this equation together with the background matter equations. An arbitrary smooth metric is not automatically an admissible background for a fixed matter model.
+
+For the explicit flat-vacuum calculation, take $\Lambda=0$, no background matter, and $\bar g_{\mu\nu}=\eta_{\mu\nu}$. For the displayed curved vacuum equation, take $\bar R_{\mu\nu}=0$. Initial-value discussions are restricted to suitable globally hyperbolic regions with appropriate data. This is an assumption about the evolution problem, not a claim that every GR spacetime has a global Cauchy surface.
+
+\section{Linearization and gauge symmetry}
+Write
+\begin{equation}
+g_{\mu\nu}=\bar g_{\mu\nu}+h_{\mu\nu},\qquad
+\psi=\bar\psi+\delta\psi,
+\label{eq:split}
+\end{equation}
+and retain terms linear in the perturbations. The general metric equation becomes
+\begin{equation}
+\delta G_{\mu\nu}[h]+\Lambda h_{\mu\nu}
+=\frac{8\pi G}{c^4}\delta T_{\mu\nu}[h,\delta\psi].
+\label{eq:linearizedeinstein}
+\end{equation}
+The linearized matter equations must accompany it whenever the background contains matter.
+
+With an active infinitesimal diffeomorphism convention, the gauge transformation is
+\begin{equation}
+h_{\mu\nu}\longmapsto h_{\mu\nu}+2\bar\nabla_{(\mu}\xi_{\nu)},
+\qquad \delta\psi\longmapsto\delta\psi+\mathcal L_\xi\bar\psi.
+\label{eq:gaugetransform}
+\end{equation}
+The sign would reverse under the opposite coordinate convention, but all transformed quantities must use the same convention. Gauge redundancy expresses different mathematical descriptions of the same perturbative geometry and matter configuration. It is not a new physical degree of freedom.
+
+Define the trace and trace reversal by
+\begin{equation}
+h=\bar g^{\mu\nu}h_{\mu\nu},\qquad
+\widetilde h_{\mu\nu}=h_{\mu\nu}-\frac12\bar g_{\mu\nu}h.
+\label{eq:tracereverse}
+\end{equation}
+In de Donder gauge,
+\begin{equation}
+\bar\nabla^\mu\widetilde h_{\mu\nu}=0,
+\label{eq:dedonder}
+\end{equation}
+the vacuum equation on a Ricci-flat background is
+\begin{equation}
+\bar\nabla^\rho\bar\nabla_\rho\widetilde h_{\mu\nu}
++2\bar R_{\mu\rho\nu\sigma}\widetilde h^{\rho\sigma}=0.
+\label{eq:curvedwave}
+\end{equation}
+The curvature term is important: local wave propagation does not imply that perturbations on every curved background behave like flat plane waves. Equation \eqref{eq:curvedwave} is not the unchanged perturbation equation for a general matter or nonzero-$\Lambda$ background \parencite{Carroll1997,Gourgoulhon2007}.
+
+For Minkowski vacuum, it reduces to
+\begin{equation}
+\Box\widetilde h_{\mu\nu}=0,\qquad
+\Box=-\frac{1}{c^2}\partial_t^2+\nabla^2.
+\label{eq:minkwave}
+\end{equation}
+Residual gauge transformations preserving de Donder gauge satisfy $\Box\xi_\mu=0$ in this flat case. The metric has ten symmetric components, but neither those components nor the four gauge conditions alone are a count of physical radiative modes. The constraints and remaining gauge freedom must also be taken into account.
+
+\section{Scalar, vector, and tensor perturbations}
+On Minkowski spacetime, decompose the spatial dependence using the Euclidean metric $\delta_{ij}$:
+\begin{equation}
+h_{00}=-2\phi,\qquad h_{0i}=S_i+\partial_i B,
+\label{eq:decomp1}
+\end{equation}
+\begin{equation}
+h_{ij}=h^{\TT}_{ij}+\partial_{(i}F_{j)}+
+\left(\partial_i\partial_j-\frac13\delta_{ij}\nabla^2\right)E
++\frac13\delta_{ij}H.
+\label{eq:decomp2}
+\end{equation}
+The fields obey
+\begin{equation}
+\partial^iS_i=\partial^iF_i=0,\qquad
+\partial^ih^{\TT}_{ij}=0,\qquad \delta^{ij}h^{\TT}_{ij}=0.
+\label{eq:ttconditions}
+\end{equation}
+Parentheses denote symmetrization with weight $1/2$. The quantities $\phi,B,E,H$ are scalar components of this decomposition, not the source variable $\PhiSrc$ or the Newtonian potential $\Ph$ used elsewhere. Their units follow from the derivatives in \eqref{eq:decomp1}--\eqref{eq:decomp2}.
+
+The decomposition requires appropriate spatial boundary conditions or a Fourier description; global zero modes and boundary degrees of freedom need separate treatment. In the radiative vacuum sector, the constraints and gauge freedom permit transverse-traceless (TT) gauge:
+\begin{equation}
+h_{00}=0,\qquad h_{0i}=0,\qquad
+\partial^ih_{ij}=0,\qquad \delta^{ij}h_{ij}=0.
+\label{eq:ttgauge}
+\end{equation}
+For a wave moving in the $z$ direction, the independent components can be written
+\begin{equation}
+h^{\TT}_{ij}=
+\begin{pmatrix}
+h_+&h_\times&0\\
+h_\times&-h_+&0\\
+0&0&0
+\end{pmatrix}.
+\end{equation}
+The two functions are the two usual gravitational-wave polarizations. No third amplitude is supplied by $\PhiSrc$, because that source placeholder does not enter the effective action as a field.
+
+This radiative statement should not be misread as saying that all scalar or vector metric perturbations are physically meaningless. In a sourced problem they can describe constrained gravitational fields and contribute to observables. Cosmological matter perturbations also have their own physical degrees of freedom. Absence of an additional vacuum scalar graviton is a narrower claim.
+
+\section{Hamiltonian degree-of-freedom count}
+The Arnowitt--Deser--Misner (ADM) formulation separates the spatial metric, lapse, and shift \parencite{ADM1962}. On the ordinary regular local constraint surface, the six components of the spatial metric $\gamma_{ij}$ and their six conjugate momenta $\pi^{ij}$ provide twelve phase-space variables per point. The lapse and shift enforce the Hamiltonian and three momentum constraints rather than supplying propagating metric modes.
+
+Each of these four first-class constraints removes one phase-space variable through the constraint and one through gauge equivalence. The reduction is therefore
+\begin{equation}
+2\times4=8,
+\label{eq:firstclassremoval}
+\end{equation}
+leaving
+\begin{equation}
+12-8=4
+\label{eq:phasespacecount}
+\end{equation}
+local physical phase-space dimensions, or
+\begin{equation}
+4/2=2
+\label{eq:configcount}
+\end{equation}
+local gravitational configuration degrees of freedom. This count agrees with the TT wave analysis.
+
+The count concerns the gravitational bulk sector. It does not count independent matter modes, global moduli, or boundary observables, and it presumes the usual nondegenerate metric and regular constraint structure. It is also not a stability theorem: two physical modes can evolve stably or unstably depending on the background and problem.
+
+\section{Quadratic radiative action and its implications}
+For weak vacuum perturbations about Minkowski spacetime, after the constraints and gauge have been handled and suitable boundary terms discarded, the TT action is
+\begin{equation}
+S_{\TT}^{(2)}=\frac{c^3}{64\pi G}\int\dd^4x\left[
+\frac{1}{c^2}\dot h^{\TT}_{ij}\dot h^{\TT}_{ij}
+-\partial_kh^{\TT}_{ij}\partial_kh^{\TT}_{ij}\right],
+\label{eq:ttaction}
+\end{equation}
+where the dot denotes $\partial_t$ and $\dd^4x=c\,\dd t\,\dd^3x$. Equivalently, the coefficient of $\dot h^2-c^2(\nabla h)^2$ in the time--space integral is $c^2/(64\pi G)$.
+
+The associated quadratic energy is
+\begin{equation}
+H_{\TT}^{(2)}=\frac{c^2}{64\pi G}\int\dd^3x\left[
+\dot h^{\TT}_{ij}\dot h^{\TT}_{ij}
++c^2\partial_kh^{\TT}_{ij}\partial_kh^{\TT}_{ij}\right].
+\end{equation}
+For $G>0$, both contributions are nonnegative. This establishes absence of a negative-kinetic-energy radiative graviton in this flat, reduced quadratic sector. It is not a positive local gravitational-energy tensor on an arbitrary spacetime.
+
+Variation gives $\ddot h^{\TT}_{ij}-c^2\nabla^2h^{\TT}_{ij}=0$. A Fourier mode proportional to $e^{i(\mathbf k\cdot\mathbf x-\omega t)}$ therefore satisfies
+\begin{equation}
+\omega^2=c^2|\mathbf k|^2.
+\end{equation}
+There is no mass term, no tachyonic mass in this dispersion relation, and no wrong-sign spatial-gradient term. Finite-wavenumber vacuum plane waves are oscillatory. Possible zero modes and boundary conditions remain part of the particular perturbation problem.
+
+\section{What does not follow from the flat calculation}
+\subsection{Local evolution and causal structure}
+After a suitable gauge choice, the Einstein equations have a hyperbolic evolution formulation, subject to constraints and suitable matter equations \parencite{Gourgoulhon2007}. Its principal part controls local propagation and the initial-value problem. Establishing this structure is not the same as proving that every allowed perturbation remains small indefinitely. A hyperbolic equation can have growing solutions, and a locally well-posed evolution can develop singular behavior.
+
+On curved backgrounds, lower-order curvature terms, the matter sector, boundaries, and global geometry matter. Stability must be attached to a specified background and a specified class of perturbations. The Minkowski calculation does not establish nonlinear stability, global existence, or the absence of caustics and spacetime singularities for all GR solutions.
+
+\subsection{No additional preferred-structure sector}
+The absence of an independent \Aflow{} field in \eqref{eq:SA} means that this action introduces no additional gravitational vector or scalar mode. That differs from a theory containing a dynamical aether vector, for which extra coupled modes must be studied \parencite{JacobsonMattingly2004}. Merely writing a normalized observer velocity in a measurement description does not alter the count.
+
+This statement does not automatically extend to a future source theory. Such a theory might reconstruct only the existing modes, introduce additional ones, or fail to define consistent evolution. Since its dynamical variables are not fixed here, none of those outcomes has been calculated.
+
+\section{Conclusion}
+The adopted effective gravitational sector has the standard local GR gauge structure and two radiative gravitational degrees of freedom. In the stated Minkowski vacuum regime, its reduced quadratic action has positive kinetic energy for $G>0$ and the massless dispersion relation $\omega^2=c^2|\mathbf k|^2$. The framework adds no propagating \Aflow{} gravitational field to that action.
+
+These are useful bounded consistency results. They do not establish the stability of every relativistic background, the health of arbitrary matter, or the consistency of the unresolved source ontology. A future claim in any of those directions needs the corresponding model and argument rather than an extension of the flat-vacuum conclusion by wording alone.
+\References
+\end{document}
