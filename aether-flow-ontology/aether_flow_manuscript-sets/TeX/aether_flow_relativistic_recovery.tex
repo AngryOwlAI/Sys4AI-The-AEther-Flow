@@ -2,18 +2,18 @@
 \newcommand{\ArticleShort}{Relativistic recovery}
 \input{shared/preamble.tex}
 % Copyright footer added 10 September 2026.
-\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 15 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
 \fancyfoot[R]{\small\thepage}
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
+  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 15 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
   \fancyfoot[R]{\small\thepage}%
   \renewcommand{\headrulewidth}{0pt}%
   \renewcommand{\footrulewidth}{0pt}%
 }
 
 \begin{document}
-\PaperTitle{Relativistic Recovery and Operational Predictions}{}{Because the effective \Aflow{} model adopts general relativity, its relativistic predictions are inherited when the matter model, constants, solutions, and measurement procedures are held fixed. This paper makes that conditional statement explicit and develops representative calculations: the Newtonian weak-field limit, vacuum light propagation, static gravitational redshift, proper-time measurements, and homogeneous cosmological evolution. A cosmological constant is distinguished from a general dynamical dark-energy component, and local special relativity is distinguished from finite-region flatness. The calculations specify what an eventual source theory would have to reproduce. They do not supply a source construction of the metric, operational clocks, or the Einstein equation.}
+\PaperTitle{Relativistic Recovery and Operational Predictions}{}{The effective \Aflow{} model adopts general relativity, so its predictions agree with the corresponding relativistic model when matter, constants, allowed solutions, and measurement procedures match. This paper develops representative calculations of Newtonian acceleration, vacuum light propagation, gravitational redshift, proper time, and homogeneous cosmology. Each result is attached to its approximation and operational assumptions. These calculations provide comparison targets for a future source theory; they do not construct a metric or clock from the ontology. A recovery claim must distinguish agreement for a selected solution from recovery of a declared solution class, and approximate agreement from exact equivalence. The resulting task specification permits checkable partial progress while preventing finite tests or inherited calculations from being presented as a full source derivation.}
 
 \section{Recovery as a statement about the effective model}
 There are two meanings of recovering relativity. A proposed modification might approach GR in a limit. A source theory might also produce a relativistic spacetime and its equations from other variables. Neither is demonstrated merely by adopting the Einstein--Hilbert action. Here, ``recovery'' refers to obtaining familiar operational results from an effective model already fixed to GR.
@@ -21,6 +21,8 @@ There are two meanings of recovering relativity. A proposed modification might a
 This is still worth making explicit. A field equation is not the whole content of a prediction: one must choose a matter model, a solution, and a procedure for comparing clocks or signals. The calculations below make those choices visible in simple regimes. They also provide concrete targets for the open source program.
 
 The source arena $\Sub$ is not identified with physical spacetime $M$, and the placeholder $\PhiSrc$ remains untyped. No source clock, causal order, or reconstruction map is used in the following derivations. The physical interpretation of the source proposal must therefore remain separate from the established meaning of the effective observables.
+
+The motivating physical picture treats observers as local participants in a deeper ordered source. Their distances and elapsed times are the intended outputs of a reconstruction, not measurements by an observer outside that source. To make this picture operational, a candidate must represent the measuring systems and recover the specified clock and signal comparisons. Calling spatial measurements a local slice or duration S-time does not yet provide that construction.
 
 \section{Exact relation to the corresponding GR model}
 Use signature $(-+++)$ and length-valued coordinates $x^0=ct$ in covariant action integrals. The effective action and equation are
@@ -108,7 +110,7 @@ so the measured vacuum light speed is
 \frac{\dd\ell_{\rm loc}}{\dd t_{\rm loc}}=c.
 \label{eq:localc}
 \end{equation}
-A coordinate speed in an extended curved chart can differ from $c$. That is not a second local light speed or evidence for propagation through a material \Aether{} wind. Over a finite region of scale $\ell$, curvature corrections are controlled by $\ell^2/\mathcal R^2$ when that ratio is small; they cannot generally be removed throughout the region by changing coordinates.
+A coordinate speed in an extended curved chart can differ from $c$. That is not a second local light speed or evidence for propagation through a material \Aether{} wind. Over a finite region of scale $\ell$, curvature corrections are controlled by $\ell^2/\mathcal R^2$ when that ratio is small; they cannot generally be removed throughout the region by changing coordinates. Making the region smaller reduces these finite-size corrections; it does not assert that the curvature tensor itself vanishes. The local special-relativistic statement concerns the tangent-space metric, not a source mechanism that switches curvature off.
 
 \section{Static gravitational redshift and clocks}
 Consider a static region with positive lapse $N(\mathbf x)$:
@@ -217,9 +219,20 @@ h_{\mu\nu}=g_{\mu\nu}+\frac{u_\mu u_\nu}{c^2}.
 \end{equation}
 This projector supplies a three-dimensional rest space at each event. It does not automatically define a global simultaneous space, and it is not a derivation of an experiential slice inside $\Sub$. The term S-time likewise remains an interpretive target. The measured duration appearing in this paper is ordinary $\tau$, with no additional source-time law assumed.
 
+\section{From comparison calculations to recovery evidence}
+A source-recovery task should specify its output in terms of the physical structures used in these calculations. Recovering a metric with a null cone is narrower than recovering Maxwell propagation on that cone. Assigning a parameter to source histories is narrower than recovering proper time for ideal clocks. Reproducing Newtonian acceleration is narrower than reproducing the same weak-field spatial geometry, redshift, and light propagation. The omitted structures remain explicit dependencies.
+
+For a selected source model, the reconstruction must identify which source states correspond to which effective states, how source transformations affect the physical description, and how the claimed observables are obtained. A full equivalence claim over a declared domain requires more than mapping some source solutions into GR solutions. It must explain whether the target GR solutions in that domain are represented and whether unwanted physical alternatives or additional restrictions remain. Redundant descriptions may be identified when their equivalence has been established.
+
+Approximate recovery needs a stated comparison, a control parameter or scale, and an error estimate for the quantities claimed to agree. Exact recovery requires the corresponding statement without an unaccounted approximation. Agreement on a finite collection of numerical examples is evidence for those examples, not a proof covering all allowed initial data or all spacetime geometries.
+
+These distinctions also determine AI credit. Reproducing the calculations in this paper is a useful control task for technical competence. Merely restating them or identifying their already documented source gap is not a new source result. A research contribution must add a verifiable implication, construction, or counterexample beyond the supplied exposition. An independently checked partial target can be reported as partial success; it must not be scored as full GR recovery.
+
 \section{Conclusion}
 The effective framework reproduces the stated weak-field, optical, clock, and cosmological relations because it uses the same relativistic equations and measurement rules as the corresponding GR model. The calculations show the role of pressure assumptions, observer motion, symmetry, length scales, and matter specification; those conditions are part of each result.
 
 They also clarify the remaining task. A source theory would have to reproduce not only a tensor equation but the operational structures that turn its solutions into predictions. No such source-to-metric, source-to-matter, or source-to-clock map has been established by adopting GR. The present benchmark provides explicit comparison targets without conflating them with a completed derivation.
+A future recovery claim should therefore be reported at the level actually established: a selected example, a controlled approximation, a declared solution class, or a full operational equivalence within a stated domain. The proposed AI assessment uses the same boundary between demonstrated and intended results.
+
 \References
 \end{document}

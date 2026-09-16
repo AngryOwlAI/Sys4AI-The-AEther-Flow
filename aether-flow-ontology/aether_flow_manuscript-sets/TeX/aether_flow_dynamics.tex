@@ -2,25 +2,25 @@
 \newcommand{\ArticleShort}{Dynamics}
 \input{shared/preamble.tex}
 % Copyright footer added 10 September 2026.
-\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
+\fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 15 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}
 \fancyfoot[R]{\small\thepage}
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 9 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
+  \fancyfoot[L]{\scriptsize Revised manuscript \textperiodcentered{} 15 September 2026 \textperiodcentered{} Copyright \textcopyright{} 2026 Alexander Samuel Ricciardi \textperiodcentered{} AngryOwl}%
   \fancyfoot[R]{\small\thepage}%
   \renewcommand{\headrulewidth}{0pt}%
   \renewcommand{\footrulewidth}{0pt}%
 }
 
 \begin{document}
-\PaperTitle{Effective Dynamics and Matter Coupling}{}{The effective dynamics of the \Aflow{} Interpretation of Relativity are specified by the Einstein--Hilbert action with ordinary matter and an optional cosmological constant. This is an adopted general-relativistic model, not an action derived from the unresolved source structure. We fix the units of the action and stress tensor, derive the bulk field equation, distinguish total conservation from separate component conservation, and identify the assumptions behind the standard particle, light, and clock descriptions. A weak-field calculation recovers Poisson's equation and the leading Newtonian acceleration with dimensionally consistent error estimates. The resulting benchmark is exact at the level of its stated classical equations; source dynamics, a reconstruction map, and the selection of a particular matter model remain separate requirements.}
+\PaperTitle{Effective Dynamics and Matter Coupling}{}{The effective dynamics of the \Aflow{} Interpretation of Relativity are specified by the Einstein--Hilbert action with ordinary matter and an optional cosmological constant. This action is adopted, not derived from the unresolved source structure. We fix the units of the action and stress tensor, derive the bulk field equation, distinguish total from separate component conservation, and state the assumptions behind particle, light, and clock descriptions. The weak-field calculation recovers Poisson's equation and leading Newtonian acceleration in the stated regime. These results define a comparison target for source research. A separate recovery criterion requires independently specified source laws, an explicit reconstruction, and control of any approximation or added assumption. The present calculation establishes consequences of the general-relativistic action, not a source origin of that action or evidence of artificial-intelligence research performance.}
 
 \section{What is being specified}
 An interpretation becomes a predictive physical model only after its fields, equations, and measurement rules have been fixed. In this framework, the effective gravitational choice is explicit: retain general relativity (GR), rather than introduce an additional low-energy \Aflow{} field. The purpose of this paper is to state that choice in a form that can be varied, checked, and used in calculations.
 
 The distinction from the source proposal is essential. Foundations uses $\Sub$ for a smooth four-dimensional source arena and $\PhiSrc$ for an unresolved source-order or evolution structure. Neither is identified here with physical spacetime or an observer velocity. The effective fields instead live on a separate manifold $M$ and are governed by the action below. No inference from the source assumptions to that action is claimed.
 
-Three possible research strategies should not be confused. One could propose a modified gravitational action and compare its predictions with GR. One could seek a source construction that reproduces GR. Or one could adopt GR and investigate an interpretation of it. The present effective paper follows the third strategy while leaving the second as an open research goal. It does not accomplish the second merely by avoiding the first.
+The project seeks a source construction that reproduces GR rather than changes its predictions. This paper supplies the independently adopted target dynamics for that investigation. It also explains the effective flow interpretation, but an interpretation of a chosen action is not a derivation of that action. If a source candidate fails to reproduce the target, retaining GR as a reference does not repair or validate that candidate.
 
 \section{Conventions and model specification}
 The spacetime $(M,g)$ is a smooth, time-oriented four-dimensional Lorentzian manifold, with signature $(-+++)$ and Levi-Civita connection $\nabla$. Greek indices range over $0,1,2,3$. The curvature convention is
@@ -31,6 +31,8 @@ The spacetime $(M,g)$ is a smooth, time-oriented four-dimensional Lorentzian man
 Coordinates in the covariant action have dimensions of length; in a time-adapted chart $x^0=ct$. When a metric is instead written with $t$ in seconds, the displayed $\dd t$ and factors of $c$ implement that coordinate change. Tensor equations do not depend on the chosen chart.
 
 The matter fields are denoted collectively by $\psi$. Their action must be specified for an actual prediction. ``Ordinary matter'' here means a matter model with the appropriate locally Lorentz-invariant laws and standard coupling to $g$; it does not mean every arbitrary Lagrangian containing a metric. Stability, characteristics, and interactions of a chosen matter sector require their own assessment.
+
+The intended source account would recover this shared metric coupling rather than add a direct force between matter and an \Aflow{} wind. Its absence from the adopted action is explicit; its absence from a future source reduction must be demonstrated. Coupling matter only to one metric is not, by itself, a proof that the full theory has no observable preferred structure. Source-dependent gravitational dynamics or restrictions on solutions could still change the comparison. The reconstruction must therefore account for the metric dynamics and admissible solutions as well as the matter coupling.
 
 The free constants include $G>0$ and a constant $\Lambda$. Initial and boundary conditions, topology, and the domain of the solution must also be supplied for a particular physical problem. They are not selected by the phrase exact closure.
 
@@ -202,12 +204,21 @@ An observer congruence can be introduced after a solution $(M,g,\psi)$ has been 
 
 There is no separate variation with respect to that interpretive congruence in \eqref{eq:SA_lambda}. If $u$ is a matter-fluid velocity, its behavior follows from the specified matter model. If it denotes a family of measuring observers, its choice describes the measurement setup. Neither role supplies a new gravitational field equation or fixes the meaning of $\PhiSrc$.
 
-A source action remains a requirement, not an executable variational principle. A future expression such as
+No source evolution law is specified. For an action-based proposal, a future expression such as
 \begin{equation}
 S_{\rm src}[q]=\int_{\Sub}\mathcal L_{\rm src}[q]
 \label{eq:substrateaction}
 \end{equation}
 would require a defined source configuration $q$ and an integrable top-degree form or density $\mathcal L_{\rm src}$, together with a domain, variations, and any boundary terms. None of these is adopted merely by displaying the schematic integral. In particular, a source measure or metric cannot be supplied without acknowledgment to make it look complete.
+
+\section{A non-circular dynamics-recovery task}
+The source research task is different from repeating the variation above. It must start from independently specified source states and laws, identify how an effective metric and matter variables are obtained, and show that their induced equations meet a declared GR target. An action-based construction may derive an effective action; a construction based on evolution equations or constraints may instead establish equivalent dynamics. Neither route is selected by the untyped $\PhiSrc$.
+
+For an action-based route, the argument must track the measure, allowed variations, boundary terms, symmetry assumptions, and normalization. If eliminating source variables or taking a limit is involved, the regime and discarded terms must be stated. Terms that become small in a controlled limit cannot be called identically absent. A nonlinear completion is not established by agreement only at the quadratic or Newtonian level.
+
+The same discipline applies to matter. A task may assume a specified matter sector and ask only for gravitational recovery, but it must not then claim to have derived universal matter coupling. Constants may be left as parameters if that is the stated target. The contribution lies in what the source argument actually fixes, not in renaming freely chosen inputs.
+
+In a fixed-assumption AI audit, importing \eqref{eq:SA_lambda} as a new source premise invalidates a claim to have derived that action from the original source data. In open construction, the same addition can be recorded as a hypothesis, but it does not advance that particular explanatory step. A valid negative result would identify a contradiction with a required dynamical property or a counterexample to a precisely stated implication. Failure to find an action after a finite search is unresolved, not a no-go theorem.
 
 \section{Exact closure and remaining questions}
 The effective gravitational equations are fixed by the adopted action. Their equality to the corresponding GR equations is exact, not only weak-field. Observational equality further requires the same matter sector, constants, solution class, and experimental interpretation. A source-based selection rule or new matter coupling would need a fresh comparison.
@@ -215,5 +226,7 @@ The effective gravitational equations are fixed by the adopted action. Their equ
 Retaining this benchmark when a speculative extension fails is a reasonable comparison policy. It does not turn the source ontology into a verified theory or guarantee the consistency of later additions. Likewise, the standard conservation law and geodesic limit do not constrain undefined source degrees of freedom.
 
 The central result of this paper is therefore a correctly normalized effective model and its representative limits. It supplies the equations needed for the companion analyses, while leaving the source origin of spacetime, gravity, matter, clocks, and the constants $G$ and $\Lambda$ unresolved.
+The source-research task is to justify an effective dynamics from separately stated source laws, with added assumptions and approximation errors exposed. Reproducing the benchmark variation is a control calculation; it is not evidence that this explanatory step has been completed.
+
 \References
 \end{document}
