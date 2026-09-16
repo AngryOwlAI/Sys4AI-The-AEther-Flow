@@ -55,12 +55,19 @@ The video communicates the project's physical intent: a deeper account of spacet
 
 The technical papers also qualify the video's geometric shorthand. An observer congruence is a family of worldlines defined within an existing spacetime, not yet a reconstruction of that spacetime. The [Geometry paper](aether-flow-ontology/aether_flow_manuscript-sets/PDF/aether_flow_geometry.pdf) distinguishes frame dragging from congruence vorticity, tidal curvature from shear, and local inertial coordinates from vanishing curvature. The [Dynamics paper](aether-flow-ontology/aether_flow_manuscript-sets/PDF/aether_flow_dynamics.pdf) explains why coupling matter to one metric does not by itself verify the full source theory. Read the video as a conceptual introduction and the manuscripts as the statement of assumptions, calculations, and current research status.
 
-<p align="center">
-   The Æther-Flow Ontology Video:<br />
+<p>
+   Overview of The Æther-Flow Ontology Video:<br />
   <a href="https://www.youtube.com/watch?v=psbk97rd9T8">
-    <img src="https://github.com/user-attachments/assets/7134da9c-977c-4312-8e2a-10a51bb2db28" alt="The Æther-Flow">
+    <img src="https://i9.ytimg.com/vi_webp/psbk97rd9T8/mqdefault.webp?v=6a414816&sqp=COiwrNUG&rs=AOn4CLBdV0XNTvN2oQmF33VCC7r_RavO7g" alt="The Æther-Flow Ontology">
   </a>
 </p>
+<p>
+   Overview of The Æther-Flow Project Video:<br />
+  <a href="https://www.youtube.com/watch?v=qp5vEEbI2kk">
+    <img src="https://i9.ytimg.com/vi_webp/qp5vEEbI2kk/mq1.webp?sqp=CLyurNUG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLD77Jyp5Tb4o9wr5CAJwDMCplqlIA" alt="The Æther-Flow Project">
+  </a>
+</p>
+
 
 ## File map
 
